@@ -38,7 +38,7 @@ export default function SiteCard({ name, logo, code, bonus, href }: Props) {
 
       <div className="mt-5">
         <h3 className="text-lg font-black">{name}</h3>
-        <p className="mt-2 min-h-10 text-xs leading-5 text-zinc-500">{bonus}</p>
+        <p className="mt-2 min-h-10 text-xs leading-5 text-white">{bonus}</p>
       </div>
 
       <div className="mt-auto pt-5">

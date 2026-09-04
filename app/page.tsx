@@ -23,9 +23,9 @@ export default function Home() {
       <header className="border-b border-red-950/80 bg-black/70 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
           <img src={`${ASSET}/darmowe_skiny.png`} alt="Darmoweskiny.pl" className="h-auto w-[190px] md:w-[250px]" />
-          <nav className="hidden gap-7 text-sm font-semibold text-zinc-400 md:flex">
+          <nav className="hidden gap-7 text-sm font-semibold text-white md:flex">
             <a href="#kody" className="hover:text-red-500">Kody</a>
-            <a href="#promocje" className="hover:text-red-500">Promocje</a>
+            <a href="#konkursy" className="hover:text-red-500">Konkursy</a>
             <a href="#sociale" className="hover:text-red-500">Sociale</a>
           </nav>
         </div>
@@ -34,18 +34,18 @@ export default function Home() {
       <section id="kody" className="mx-auto max-w-7xl px-5 py-14 md:px-8 md:py-20">
         <p className="text-xs font-black uppercase tracking-[.22em] text-red-500">Najlepsze oferty</p>
         <h1 className="mt-2 text-3xl font-black tracking-tight md:text-5xl">Kody do <span className="text-red-500">stron</span></h1>
-        <p className="mt-3 max-w-2xl text-sm text-zinc-500 md:text-base">Kod główny: <strong className="text-red-500">HARDULO</strong>. Kliknij kartę albo skopiuj kod jednym przyciskiem.</p>
+        <p className="mt-3 max-w-2xl text-sm text-white md:text-base">Kod główny: <strong className="text-red-500">HARDULO</strong>. Kliknij kartę albo skopiuj kod jednym przyciskiem.</p>
 
         <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {sites.map((site) => <SiteCard key={site.name} {...site} />)}
         </div>
       </section>
 
-      <section id="promocje" className="border-y border-red-950/60 bg-red-950/[.06]">
+      <section id="konkursy" className="border-y border-red-950/60 bg-red-950/[.06]">
         <div className="mx-auto max-w-7xl px-5 py-14 md:px-8 md:py-20">
           <div className="flex items-center gap-2 text-red-500"><Gift size={18} /><span className="text-xs font-black uppercase tracking-[.22em]">Aktualne</span></div>
-          <h2 className="mt-2 text-3xl font-black md:text-5xl">Giveawaye i <span className="text-red-500">promocje</span></h2>
-          <p className="mt-3 max-w-2xl text-sm text-zinc-500">Układ przygotowany pod skiny z API. Do czasu podłączenia danych pokazujemy wyłącznie promocje, które można sprawdzić u źródła.</p>
+          <h2 className="mt-2 text-3xl font-black md:text-5xl">Konkursy</h2>
+          <p className="mt-3 max-w-2xl text-sm text-white">Układ przygotowany pod skiny z API. Do czasu podłączenia danych pokazujemy wyłącznie konkursy, które można sprawdzić u źródła.</p>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {promos.map((promo) => (
@@ -60,7 +60,7 @@ export default function Home() {
                   <span className="rounded bg-red-950 px-2 py-1 font-black text-red-400">GV</span>
                   <span className="font-black text-emerald-400">{promo.kicker}</span>
                 </div>
-                <p className="mt-3 line-clamp-2 text-xs leading-5 text-zinc-500">{promo.description}</p>
+                <p className="mt-3 line-clamp-2 text-xs leading-5 text-white">{promo.description}</p>
                 <div className="mt-auto flex items-center justify-center gap-2 pt-5 text-xs font-black uppercase text-white">Sprawdź promocję <ArrowUpRight size={15} className="text-red-500 transition group-hover:translate-x-1 group-hover:-translate-y-1" /></div>
               </a>
             ))}
@@ -70,7 +70,7 @@ export default function Home() {
 
       <section id="sociale" className="mx-auto max-w-7xl px-5 py-14 md:px-8 md:py-20">
         <h2 className="text-3xl font-black md:text-5xl">Moje <span className="text-red-500">sociale</span></h2>
-        <p className="mt-3 text-sm text-zinc-500">Filmy, shorty, nowe kody i informacje o promocjach.</p>
+        <p className="mt-3 text-sm text-white">Filmy, shorty, nowe kody i informacje o konkursach.</p>
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           <Social title="YouTube" subtitle="@Harduloo" href="https://www.youtube.com/@Harduloo" icon={<YouTubeIcon />} />
           <Social title="Instagram" subtitle="@harduloo" href="https://www.instagram.com/harduloo/" icon={<InstagramIcon />} />
@@ -81,7 +81,7 @@ export default function Home() {
       <footer className="border-t border-red-950/70">
         <div className="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-8 md:flex-row md:items-center md:justify-between md:px-8">
           <img src={`${ASSET}/darmowe_skiny.png`} alt="Darmoweskiny" className="h-auto w-44" />
-          <p className="text-xs text-zinc-600">© {new Date().getFullYear()} Darmoweskiny.pl</p>
+          <p className="text-xs text-white">© {new Date().getFullYear()} Darmoweskiny.pl</p>
         </div>
       </footer>
     </main>
@@ -110,7 +110,7 @@ function InstagramIcon() {
 function Social({ title, subtitle, href, icon }: { title: string; subtitle: string; href: string; icon: React.ReactNode }) {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-between rounded-2xl border border-white/10 bg-[#0a0a0a] p-5 transition hover:border-red-500/40 hover:bg-red-950/20">
-      <div className="flex items-center gap-4"><div className="flex h-12 w-12 items-center justify-center rounded-xl bg-red-600 text-white">{icon}</div><div><div className="font-black">{title}</div><div className="mt-1 text-xs text-zinc-500">{subtitle}</div></div></div>
+      <div className="flex items-center gap-4"><div className="flex h-12 w-12 items-center justify-center rounded-xl bg-red-600 text-white">{icon}</div><div><div className="font-black">{title}</div><div className="mt-1 text-xs text-white">{subtitle}</div></div></div>
       <ArrowUpRight size={20} className="text-zinc-600 transition group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-red-500" />
     </a>
   );
