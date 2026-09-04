@@ -1,4 +1,4 @@
-import { ArrowUpRight, Gift, Instagram, Music2, Youtube } from 'lucide-react';
+import { ArrowUpRight, Gift, Music2 } from 'lucide-react';
 import SiteCard from '@/components/SiteCard';
 
 const ASSET = 'https://raw.githubusercontent.com/harddd4/Chyba-dziala-vercel-anali/main';
@@ -74,8 +74,8 @@ export default function Home() {
         <h2 className="text-3xl font-black md:text-5xl">Moje <span className="text-red-500">sociale</span></h2>
         <p className="mt-3 text-sm text-zinc-500">Filmy, shorty, nowe kody i informacje o promocjach.</p>
         <div className="mt-8 grid gap-4 md:grid-cols-3">
-          <Social title="YouTube" subtitle="@Harduloo" href="https://www.youtube.com/@Harduloo" icon={<Youtube />} />
-          <Social title="Instagram" subtitle="@harduloo" href="https://www.instagram.com/harduloo/" icon={<Instagram />} />
+          <Social title="YouTube" subtitle="@Harduloo" href="https://www.youtube.com/@Harduloo" icon={<YouTubeIcon />} />
+          <Social title="Instagram" subtitle="@harduloo" href="https://www.instagram.com/harduloo/" icon={<InstagramIcon />} />
           <Social title="TikTok" subtitle="@hardulo" href="https://www.tiktok.com/@hardulo" icon={<Music2 />} />
         </div>
       </section>
@@ -87,6 +87,25 @@ export default function Home() {
         </div>
       </footer>
     </main>
+  );
+}
+
+function YouTubeIcon() {
+  return (
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+      <path d="M22 12s0-3.5-.45-5.2a2.7 2.7 0 0 0-1.9-1.9C18 4.5 12 4.5 12 4.5s-6 0-7.65.4a2.7 2.7 0 0 0-1.9 1.9C2 8.5 2 12 2 12s0 3.5.45 5.2a2.7 2.7 0 0 0 1.9 1.9c1.65.4 7.65.4 7.65.4s6 0 7.65-.4a2.7 2.7 0 0 0 1.9-1.9C22 15.5 22 12 22 12Z" />
+      <path d="m10 9 5 3-5 3Z" />
+    </svg>
+  );
+}
+
+function InstagramIcon() {
+  return (
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+    </svg>
   );
 }
 
