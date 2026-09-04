@@ -1,5 +1,6 @@
 import { ArrowUpRight, Gift, Music2 } from 'lucide-react';
 import SiteCard from '@/components/SiteCard';
+import { contests } from '@/lib/contests';
 
 const ASSET = 'https://raw.githubusercontent.com/harddd4/Chyba-dziala-vercel-anali/main';
 
@@ -10,13 +11,9 @@ const sites = [
   { name: 'Hellcase', logo: `${ASSET}/hellcase.png`, code: 'HARDULO', bonus: 'Bonus przy doładowaniu', href: 'https://hellca.se/hardulo' },
 ];
 
-const promos = [
-  { title: 'CS2 Case', kicker: 'Do 3 darmowych otwarć', description: 'Darmowa skrzynka na CSGO-SKINS po spełnieniu warunków opisanych na stronie.', href: 'https://csgo-skins.com/case/cs2-case' },
-  { title: 'Daily Case', kicker: 'Codzienna skrzynka', description: 'Codzienny case z aktualną pulą skinów bezpośrednio na CSGO-SKINS.', href: 'https://csgo-skins.com/case/daily-case' },
-  { title: 'Discord Case', kicker: 'Kody publikowane okresowo', description: 'CSGO-SKINS publikuje od czasu do czasu kody na darmowe otwarcia Discord Case.', href: 'https://csgo-skins.com/case/discord-case' },
-];
-
 export default function Home() {
+  const activeContests = contests.filter((contest) => contest.active);
+
   return (
     <main className="cosmic-site min-h-screen overflow-hidden bg-[#050505] text-white">
       <div className="star-field" aria-hidden="true" />
@@ -48,19 +45,23 @@ export default function Home() {
           <p className="mt-3 max-w-2xl text-sm text-white">Układ przygotowany pod skiny z API. Do czasu podłączenia danych pokazujemy wyłącznie konkursy, które można sprawdzić u źródła.</p>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {promos.map((promo) => (
-              <a key={promo.title} href={promo.href} target="_blank" rel="noopener noreferrer sponsored" className="group promo-card flex min-h-[330px] flex-col rounded-2xl border border-red-500/20 p-4 transition hover:-translate-y-1 hover:border-red-500/60">
+            {activeContests.map((contest) => (
+              <a key={contest.title} href={contest.href} target="_blank" rel="noopener noreferrer sponsored" className="group promo-card flex min-h-[330px] flex-col rounded-2xl border border-red-500/20 p-4 transition hover:-translate-y-1 hover:border-red-500/60">
                 <div className="skin-preview relative flex h-40 items-center justify-center overflow-hidden rounded-xl">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(239,68,68,.20),transparent_62%)]" />
-                  <Gift size={76} strokeWidth={1.15} className="relative text-red-500/75 drop-shadow-[0_0_24px_rgba(239,68,68,.35)] transition group-hover:scale-110" />
+                  {contest.image ? (
+                    <img src={contest.image} alt={contest.title} className="relative h-full w-full object-contain p-3 transition group-hover:scale-105" />
+                  ) : (
+                    <Gift size={76} strokeWidth={1.15} className="relative text-red-500/75 drop-shadow-[0_0_24px_rgba(239,68,68,.35)] transition group-hover:scale-110" />
+                  )}
                   <div className="absolute right-2 top-2 rounded-md bg-red-600/15 px-2 py-1 text-[9px] font-black tracking-widest text-red-400">LIVE</div>
                 </div>
-                <h3 className="mt-4 truncate text-base font-black">{promo.title}</h3>
+                <h3 className="mt-4 truncate text-base font-black">{contest.title}</h3>
                 <div className="mt-2 flex items-center justify-between gap-3 text-xs">
-                  <span className="rounded bg-red-950 px-2 py-1 font-black text-red-400">GV</span>
-                  <span className="font-black text-emerald-400">{promo.kicker}</span>
+                  <span className="rounded bg-red-950 px-2 py-1 font-black text-red-400">{contest.badge}</span>
+                  <span className="font-black text-emerald-400">{contest.value}</span>
                 </div>
-                <p className="mt-3 line-clamp-2 text-xs leading-5 text-white">{promo.description}</p>
+                <p className="mt-3 line-clamp-2 text-xs leading-5 text-white">{contest.description}</p>
                 <div className="mt-auto flex items-center justify-center gap-2 pt-5 text-xs font-black uppercase text-white">Sprawdź promocję <ArrowUpRight size={15} className="text-red-500 transition group-hover:translate-x-1 group-hover:-translate-y-1" /></div>
               </a>
             ))}
