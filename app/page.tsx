@@ -18,7 +18,8 @@ const promos = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#050505] text-white">
+    <main className="cosmic-site min-h-screen overflow-hidden bg-[#050505] text-white">
+      <div className="star-field" aria-hidden="true" />
       <header className="border-b border-red-950/80 bg-black/70 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
           <img src={`${ASSET}/darmowe_skiny.png`} alt="Darmoweskiny.pl" className="h-auto w-[190px] md:w-[250px]" />
@@ -32,8 +33,7 @@ export default function Home() {
 
       <section className="hero-space relative mx-auto max-w-7xl overflow-hidden px-5 pb-8 pt-10 md:px-8 md:pt-16">
         <div className="hero-panel relative px-2 py-10 md:px-10 md:py-16">
-          <div className="star-field" aria-hidden="true" />
-          <div className="relative mx-auto max-w-5xl">
+          <div className="relative mx-auto max-w-3xl">
             <img src={`${ASSET}/darmowe_skiny.png`} alt="Darmowe Skiny" className="mx-auto h-auto w-full object-contain" />
           </div>
         </div>
