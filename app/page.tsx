@@ -31,15 +31,7 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="hero-space relative mx-auto max-w-7xl overflow-hidden px-5 pb-8 pt-10 md:px-8 md:pt-16">
-        <div className="hero-panel relative px-2 py-10 md:px-10 md:py-16">
-          <div className="relative mx-auto max-w-3xl">
-            <img src={`${ASSET}/darmowe_skiny.png`} alt="Darmowe Skiny" className="mx-auto h-auto w-full object-contain" />
-          </div>
-        </div>
-      </section>
-
-      <section id="kody" className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-16">
+      <section id="kody" className="mx-auto max-w-7xl px-5 py-14 md:px-8 md:py-20">
         <p className="text-xs font-black uppercase tracking-[.22em] text-red-500">Najlepsze oferty</p>
         <h1 className="mt-2 text-3xl font-black tracking-tight md:text-5xl">Kody do <span className="text-red-500">stron</span></h1>
         <p className="mt-3 max-w-2xl text-sm text-zinc-500 md:text-base">Kod główny: <strong className="text-red-500">HARDULO</strong>. Kliknij kartę albo skopiuj kod jednym przyciskiem.</p>

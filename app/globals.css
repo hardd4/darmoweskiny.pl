@@ -20,23 +20,9 @@ a { color: inherit; text-decoration: none; }
 h1, h2, h3 { text-transform: uppercase; }
 ::selection { background: #dc2626; color: white; }
 
-.hero-space::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: radial-gradient(ellipse at 50% 45%, rgba(185, 28, 28, .13), transparent 58%);
-}
-
 .cosmic-site > :not(.star-field) {
   position: relative;
   z-index: 1;
-}
-
-.hero-panel {
-  isolation: isolate;
-  background:
-    radial-gradient(ellipse at 50% 50%, rgba(220,38,38,.12), transparent 57%);
 }
 
 .star-field {
