@@ -5,10 +5,9 @@ const ASSET = 'https://raw.githubusercontent.com/harddd4/Chyba-dziala-vercel-ana
 
 const sites = [
   { name: 'CSGO-SKINS', logo: `${ASSET}/csgoskins.png`, code: 'HARDULO', bonus: '2,10 zł na start + 10% bonusu', href: 'https://csgo-skins.com/?ref=hardulo' },
-  { name: 'CaseDrop', logo: `${ASSET}/casedrop.png`, code: 'HARDULO', bonus: 'Darmowa skrzynka', href: 'https://casedrop.eu/r/hardulo' },
+  { name: 'CaseHug', logo: `${ASSET}/casehug.png`, code: 'HARDULO', bonus: '2 darmowe skrzynki + bonus', href: 'https://casehug.com/r/HARDULO' },
   { name: 'G4Skins', logo: `${ASSET}/g4skins.png`, code: 'HARDULO', bonus: 'Darmowa skrzynka + bonus', href: 'https://g4skins.com/ref/hardulo' },
   { name: 'Hellcase', logo: `${ASSET}/hellcase.png`, code: 'HARDULO', bonus: 'Bonus przy doładowaniu', href: 'https://hellca.se/hardulo' },
-  { name: 'CaseHug', logo: `${ASSET}/casehug.png`, code: 'HARDULO', bonus: '2 darmowe skrzynki + bonus', href: 'https://casehug.com/r/HARDULO' },
 ];
 
 const promos = [
@@ -31,9 +30,9 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="mx-auto max-w-7xl px-5 pb-8 pt-8 md:px-8 md:pt-12">
-        <div className="hero-panel relative overflow-hidden rounded-[32px] border border-red-500/20 px-5 py-8 md:px-10 md:py-12">
-          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent" />
+      <section className="hero-space relative mx-auto max-w-7xl overflow-hidden px-5 pb-8 pt-10 md:px-8 md:pt-16">
+        <div className="hero-panel relative px-2 py-10 md:px-10 md:py-16">
+          <div className="star-field" aria-hidden="true" />
           <div className="relative mx-auto max-w-5xl">
             <img src={`${ASSET}/darmowe_skiny.png`} alt="Darmowe Skiny" className="mx-auto h-auto w-full object-contain" />
           </div>
@@ -45,7 +44,7 @@ export default function Home() {
         <h1 className="mt-2 text-3xl font-black tracking-tight md:text-5xl">Kody do <span className="text-red-500">stron</span></h1>
         <p className="mt-3 max-w-2xl text-sm text-zinc-500 md:text-base">Kod główny: <strong className="text-red-500">HARDULO</strong>. Kliknij kartę albo skopiuj kod jednym przyciskiem.</p>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {sites.map((site) => <SiteCard key={site.name} {...site} />)}
         </div>
       </section>
@@ -54,16 +53,23 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-5 py-14 md:px-8 md:py-20">
           <div className="flex items-center gap-2 text-red-500"><Gift size={18} /><span className="text-xs font-black uppercase tracking-[.22em]">Aktualne</span></div>
           <h2 className="mt-2 text-3xl font-black md:text-5xl">Giveawaye i <span className="text-red-500">promocje</span></h2>
-          <p className="mt-3 max-w-2xl text-sm text-zinc-500">Bez zmyślonych nagród — tutaj są rzeczy, które da się sprawdzić bezpośrednio na CSGO-SKINS.</p>
+          <p className="mt-3 max-w-2xl text-sm text-zinc-500">Układ przygotowany pod skiny z API. Do czasu podłączenia danych pokazujemy wyłącznie promocje, które można sprawdzić u źródła.</p>
 
-          <div className="mt-8 grid gap-5 md:grid-cols-3">
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {promos.map((promo) => (
-              <a key={promo.title} href={promo.href} target="_blank" rel="noopener noreferrer sponsored" className="group promo-card rounded-3xl border border-red-500/15 p-6 transition hover:-translate-y-1 hover:border-red-500/50">
-                <div className="inline-flex rounded-lg bg-red-500/10 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-red-400">CSGO-SKINS</div>
-                <h3 className="mt-6 text-2xl font-black">{promo.title}</h3>
-                <div className="mt-2 text-sm font-semibold text-red-400">{promo.kicker}</div>
-                <p className="mt-3 text-sm leading-6 text-zinc-500">{promo.description}</p>
-                <div className="mt-7 flex items-center gap-2 font-bold text-red-500">Sprawdź <ArrowUpRight size={17} className="transition group-hover:translate-x-1 group-hover:-translate-y-1" /></div>
+              <a key={promo.title} href={promo.href} target="_blank" rel="noopener noreferrer sponsored" className="group promo-card flex min-h-[330px] flex-col rounded-2xl border border-red-500/20 p-4 transition hover:-translate-y-1 hover:border-red-500/60">
+                <div className="skin-preview relative flex h-40 items-center justify-center overflow-hidden rounded-xl">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(239,68,68,.20),transparent_62%)]" />
+                  <Gift size={76} strokeWidth={1.15} className="relative text-red-500/75 drop-shadow-[0_0_24px_rgba(239,68,68,.35)] transition group-hover:scale-110" />
+                  <div className="absolute right-2 top-2 rounded-md bg-red-600/15 px-2 py-1 text-[9px] font-black tracking-widest text-red-400">LIVE</div>
+                </div>
+                <h3 className="mt-4 truncate text-base font-black">{promo.title}</h3>
+                <div className="mt-2 flex items-center justify-between gap-3 text-xs">
+                  <span className="rounded bg-red-950 px-2 py-1 font-black text-red-400">GV</span>
+                  <span className="font-black text-emerald-400">{promo.kicker}</span>
+                </div>
+                <p className="mt-3 line-clamp-2 text-xs leading-5 text-zinc-500">{promo.description}</p>
+                <div className="mt-auto flex items-center justify-center gap-2 pt-5 text-xs font-black uppercase text-white">Sprawdź promocję <ArrowUpRight size={15} className="text-red-500 transition group-hover:translate-x-1 group-hover:-translate-y-1" /></div>
               </a>
             ))}
           </div>
