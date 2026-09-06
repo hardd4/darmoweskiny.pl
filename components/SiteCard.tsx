@@ -6,12 +6,13 @@ import { motion } from 'motion/react';
 type Props = {
   name: string;
   logo: string;
+  offer: string;
+  detail: string;
   code: string;
-  bonus: string;
   href: string;
 };
 
-export default function SiteCard({ name, logo, code, bonus, href }: Props) {
+export default function SiteCard({ name, logo, offer, detail, code, href }: Props) {
   return (
     <motion.article
       whileHover={{ y: -5 }}
@@ -24,16 +25,15 @@ export default function SiteCard({ name, logo, code, bonus, href }: Props) {
         <img src={logo} alt={name} className="max-h-20 w-auto max-w-[88%] object-contain" />
       </a>
 
-      <div className="mt-5">
+      <div className="mt-5 text-center">
         <h3 className="text-lg font-black">{name}</h3>
-        <p className="mt-2 min-h-10 text-xs leading-5 text-white">{bonus}</p>
+        <p className="mt-5 text-sm font-black text-white">{offer}</p>
+        <p className="mt-2 min-h-10 text-xs font-bold leading-5 text-white">
+          {detail} Z KODEM <span className="text-red-500">{code}</span>
+        </p>
       </div>
 
       <div className="mt-auto pt-5">
-        <div className="mb-3 rounded-xl border border-red-500/15 bg-red-500/[.06] px-4 py-3">
-          <span className="text-[10px] font-black uppercase tracking-widest text-zinc-600">Kod</span>
-          <div className="mt-1 font-black tracking-wider text-red-500">{code}</div>
-        </div>
         <a href={href} target="_blank" rel="noopener noreferrer sponsored" className="flex w-full items-center justify-center gap-2 rounded-xl bg-red-600 px-4 py-3 text-sm font-black uppercase text-white transition hover:bg-red-500 active:scale-[.98]">
           Odbierz bonus <ArrowUpRight size={17} />
         </a>
