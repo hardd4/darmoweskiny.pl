@@ -8,7 +8,6 @@ const sites = [
   { name: 'CSGO-SKINS', theme: 'cyan' as const, logo: `${ASSET}/csgoskins.png`, offer: '+10% DO DOŁADOWANIA', detail: '2,10 ZŁ NA START', code: 'HARDULO', href: 'https://csgo-skins.com/?ref=hardulo' },
   { name: 'CaseHug', theme: 'red' as const, logo: `${ASSET}/casehug.png`, offer: '2 DARMOWE SKRZYNKI', detail: 'ODBIERZ BONUS', code: 'HARDULO', href: 'https://casehug.com/r/HARDULO' },
   { name: 'G4Skins', theme: 'violet' as const, logo: `${ASSET}/g4skins.png`, offer: 'DARMOWA SKRZYNKA', detail: 'DODATKOWY BONUS', code: 'HARDULO', href: 'https://g4skins.com/ref/hardulo' },
-  { name: 'Hellcase', theme: 'orange' as const, logo: `${ASSET}/hellcase.png`, offer: 'BONUS DO DOŁADOWANIA', detail: 'AKTYWUJ OFERTĘ', code: 'HARDULO', href: 'https://hellca.se/hardulo' },
 ];
 
 export default function Home() {
@@ -33,7 +32,7 @@ export default function Home() {
         <h1 className="mt-2 text-3xl font-black tracking-tight md:text-5xl">Kody do <span className="text-red-500">stron</span></h1>
         <p className="mt-3 max-w-2xl text-sm text-white md:text-base">Kod główny: <strong className="text-red-500">HARDULO</strong>. Kliknij kartę albo skopiuj kod jednym przyciskiem.</p>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {sites.map((site) => <SiteCard key={site.name} {...site} />)}
         </div>
       </section>

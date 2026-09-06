@@ -10,14 +10,13 @@ type Props = {
   detail: string;
   code: string;
   href: string;
-  theme: 'cyan' | 'red' | 'violet' | 'orange';
+  theme: 'cyan' | 'red' | 'violet';
 };
 
 const themes = {
-  cyan: 'border-cyan-500/25 bg-cyan-500/[.05] text-cyan-300',
-  red: 'border-red-500/25 bg-red-500/[.05] text-red-400',
-  violet: 'border-violet-500/25 bg-violet-500/[.05] text-violet-300',
-  orange: 'border-orange-500/25 bg-orange-500/[.05] text-orange-300',
+  cyan: 'text-cyan-300',
+  red: 'text-red-400',
+  violet: 'text-violet-300',
 };
 
 export default function SiteCard({ name, logo, offer, detail, code, href, theme }: Props) {
@@ -33,7 +32,7 @@ export default function SiteCard({ name, logo, offer, detail, code, href, theme 
         <img src={logo} alt={name} className="max-h-20 w-auto max-w-[88%] object-contain" />
       </a>
 
-      <div className={`mt-5 rounded-2xl border px-3 py-5 text-center ${themes[theme]}`}>
+      <div className={`mt-5 px-3 py-3 text-center ${themes[theme]}`}>
         <p className="text-sm font-black">{offer}</p>
         <p className="mt-2 min-h-10 text-xs font-bold leading-5 text-white">
           {detail} Z KODEM <span className="text-red-500">{code}</span>
