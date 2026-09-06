@@ -1,4 +1,4 @@
-import { ArrowUpRight, Gift, Music2 } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Check, Copy, Gift, MousePointerClick, Music2 } from 'lucide-react';
 import SiteCard from '@/components/SiteCard';
 import { contests } from '@/lib/contests';
 
@@ -20,21 +20,36 @@ export default function Home() {
       <header className="border-b border-red-950/80 bg-black/70 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
           <img src={`${ASSET}/darmowe_skiny.png`} alt="Darmoweskiny.pl" className="h-auto w-[190px] md:w-[250px]" />
-          <nav className="hidden gap-7 text-sm font-semibold text-white md:flex">
+          <nav className="hidden items-center gap-7 text-sm font-semibold text-white md:flex">
             <a href="#kody" className="hover:text-red-500">Kody</a>
             <a href="#konkursy" className="hover:text-red-500">Konkursy</a>
             <a href="#sociale" className="hover:text-red-500">Sociale</a>
+            <a href="#kody" className="rounded-lg bg-red-600 px-4 py-2 font-black transition hover:bg-red-500">Zacznij</a>
           </nav>
         </div>
       </header>
 
-      <section id="kody" className="mx-auto max-w-7xl px-5 py-14 md:px-8 md:py-20">
-        <p className="text-xs font-black uppercase tracking-[.22em] text-red-500">Najlepsze oferty</p>
-        <h1 className="mt-2 text-3xl font-black tracking-tight md:text-5xl">Kody do <span className="text-red-500">stron</span></h1>
-        <p className="mt-3 max-w-2xl text-sm text-white md:text-base">Kod główny: <strong className="text-red-500">HARDULO</strong>. Kliknij kartę albo skopiuj kod jednym przyciskiem.</p>
+      <section className="mx-auto max-w-5xl px-5 pb-10 pt-14 text-center md:px-8 md:pb-14 md:pt-20">
+        <p className="text-xs font-black uppercase tracking-[.22em] text-red-500">Darmowe skiny i bonusy CS2</p>
+        <h1 className="mt-3 text-4xl font-black tracking-tight md:text-6xl">Odbierz bonus w <span className="text-red-500">3 krokach</span></h1>
+        <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-white md:text-base">Wybierz serwis, skopiuj kod <strong>HARDULO</strong> i przejdź na stronę, aby aktywować przypisany bonus.</p>
+
+        <div className="mt-8 grid gap-3 text-left sm:grid-cols-3">
+          <Step number="1" icon={<MousePointerClick size={20} />} title="Wybierz stronę" text="Porównaj bonusy poniżej." />
+          <Step number="2" icon={<Copy size={20} />} title="Skopiuj kod" text="Każda oferta używa kodu HARDULO." />
+          <Step number="3" icon={<Check size={20} />} title="Odbierz bonus" text="Otwórz serwis i aktywuj kod." />
+        </div>
+
+        <a href="#kody" className="mt-8 inline-flex items-center gap-2 rounded-xl bg-red-600 px-6 py-3 text-sm font-black uppercase transition hover:bg-red-500">Wybieram stronę <ArrowDown size={17} /></a>
+      </section>
+
+      <section id="kody" className="mx-auto max-w-7xl scroll-mt-4 px-5 py-12 md:px-8 md:py-16">
+        <p className="text-xs font-black uppercase tracking-[.22em] text-red-500">Krok 1</p>
+        <h2 className="mt-2 text-3xl font-black tracking-tight md:text-5xl">Wybierz <span className="text-red-500">stronę</span></h2>
+        <p className="mt-3 max-w-2xl text-sm text-white md:text-base">Nie wiesz którą wybrać? Zacznij od pierwszej, polecanej oferty.</p>
 
         <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-          {sites.map((site) => <SiteCard key={site.name} {...site} />)}
+          {sites.map((site, index) => <SiteCard key={site.name} {...site} recommended={index === 0} />)}
         </div>
       </section>
 
@@ -86,6 +101,19 @@ export default function Home() {
         </div>
       </footer>
     </main>
+  );
+}
+
+function Step({ number, icon, title, text }: { number: string; icon: React.ReactNode; title: string; text: string }) {
+  return (
+    <div className="rounded-2xl border border-white/10 bg-black/55 p-4">
+      <div className="flex items-center gap-3">
+        <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-red-600 font-black">{number}</span>
+        <span className="text-red-500">{icon}</span>
+      </div>
+      <h3 className="mt-4 text-sm font-black">{title}</h3>
+      <p className="mt-1 text-xs leading-5 text-white">{text}</p>
+    </div>
   );
 }
 
