@@ -30,7 +30,7 @@ h1, h2, h3 { text-transform: uppercase; }
   z-index: 0;
   inset: -15%;
   pointer-events: none;
-  opacity: .42;
+  opacity: .68;
   background-image:
     radial-gradient(circle, rgba(248,113,113,.9) 0 1px, transparent 1.7px),
     radial-gradient(circle, rgba(127,29,29,.75) 0 1px, transparent 1.8px),
