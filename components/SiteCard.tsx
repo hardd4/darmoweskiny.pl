@@ -1,8 +1,7 @@
 'use client';
 
-import { Check, Copy, ExternalLink } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { motion } from 'motion/react';
-import { useState } from 'react';
 
 type Props = {
   name: string;
@@ -13,14 +12,6 @@ type Props = {
 };
 
 export default function SiteCard({ name, logo, code, bonus, href }: Props) {
-  const [copied, setCopied] = useState(false);
-
-  async function copyCode() {
-    await navigator.clipboard.writeText(code);
-    setCopied(true);
-    window.setTimeout(() => setCopied(false), 1400);
-  }
-
   return (
     <motion.article
       whileHover={{ y: -5 }}
@@ -28,13 +19,10 @@ export default function SiteCard({ name, logo, code, bonus, href }: Props) {
       className="group relative flex min-h-[330px] flex-col overflow-hidden rounded-3xl border border-white/10 bg-[#0b0808] p-5 transition hover:border-red-500/40"
     >
       <div className="pointer-events-none absolute right-0 top-0 h-28 w-28 bg-red-600/10 blur-[55px]" />
-      <a href={href} target="_blank" rel="noopener noreferrer sponsored" className="absolute right-4 top-4 z-20 text-zinc-600 transition hover:text-red-500" aria-label={`Otwórz ${name}`}>
-        <ExternalLink size={17} />
-      </a>
 
-      <div className="flex h-24 items-center justify-center">
+      <a href={href} target="_blank" rel="noopener noreferrer sponsored" className="relative flex h-24 items-center justify-center rounded-xl transition hover:bg-white/[.03]" aria-label={`Odbierz bonus na ${name}`}>
         <img src={logo} alt={name} className="max-h-20 w-auto max-w-[88%] object-contain" />
-      </div>
+      </a>
 
       <div className="mt-5">
         <h3 className="text-lg font-black">{name}</h3>
@@ -46,9 +34,9 @@ export default function SiteCard({ name, logo, code, bonus, href }: Props) {
           <span className="text-[10px] font-black uppercase tracking-widest text-zinc-600">Kod</span>
           <div className="mt-1 font-black tracking-wider text-red-500">{code}</div>
         </div>
-        <button onClick={copyCode} className="flex w-full items-center justify-center gap-2 rounded-xl bg-red-600 px-4 py-3 text-sm font-black text-white transition hover:bg-red-500 active:scale-[.98]">
-          {copied ? <><Check size={17} />Skopiowano</> : <><Copy size={17} />Kopiuj kod</>}
-        </button>
+        <a href={href} target="_blank" rel="noopener noreferrer sponsored" className="flex w-full items-center justify-center gap-2 rounded-xl bg-red-600 px-4 py-3 text-sm font-black uppercase text-white transition hover:bg-red-500 active:scale-[.98]">
+          Odbierz bonus <ArrowUpRight size={17} />
+        </a>
       </div>
     </motion.article>
   );
