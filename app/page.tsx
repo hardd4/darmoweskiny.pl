@@ -22,14 +22,14 @@ export default function Home() {
           <img src={`${ASSET}/darmowe_skiny.png`} alt="Darmoweskiny.pl" className="h-auto w-[190px] md:w-[250px]" />
           <nav className="hidden gap-7 text-sm font-semibold text-white md:flex">
             <a href="#kody" className="hover:text-red-500">Kody</a>
-            <a href="#konkursy" className="hover:text-red-500">Konkursy</a>
+            <a href="#giveawaye" className="hover:text-red-500">Giveawaye</a>
             <a href="#sociale" className="hover:text-red-500">Sociale</a>
           </nav>
         </div>
       </header>
 
       <section id="kody" className="mx-auto max-w-7xl px-5 py-14 md:px-8 md:py-20">
-        <p className="text-xs font-black uppercase tracking-[.22em] text-red-500">Najlepsze oferty</p>
+        <p className="text-xs font-black uppercase tracking-[.22em] text-red-500">Kody bonusowe</p>
         <h1 className="mt-2 text-3xl font-black tracking-tight md:text-5xl">Kody do <span className="text-red-500">stron</span></h1>
         <p className="mt-3 max-w-2xl text-sm text-white md:text-base">Kod główny: <strong className="text-red-500">HARDULO</strong>. Kliknij kartę albo skopiuj kod jednym przyciskiem.</p>
 
@@ -38,11 +38,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="konkursy" className="border-y border-red-950/60 bg-red-950/[.06]">
+      <section id="giveawaye" className="border-y border-red-950/60 bg-black/35">
         <div className="mx-auto max-w-7xl px-5 py-14 md:px-8 md:py-20">
           <div className="flex items-center gap-2 text-red-500"><Gift size={18} /><span className="text-xs font-black uppercase tracking-[.22em]">Aktualne</span></div>
-          <h2 className="mt-2 text-3xl font-black md:text-5xl">Konkursy</h2>
-          <p className="mt-3 max-w-2xl text-sm text-white">Układ przygotowany pod skiny z API. Do czasu podłączenia danych pokazujemy wyłącznie konkursy, które można sprawdzić u źródła.</p>
+          <h2 className="mt-2 text-3xl font-black md:text-5xl">Giveawaye z <span className="text-red-500">CSGO-SKINS</span></h2>
+          <p className="mt-3 max-w-2xl text-sm text-white">Aktualne darmowe skrzynki i akcje dostępne na CSGO-SKINS.</p>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {activeContests.map((contest) => (
@@ -62,7 +62,7 @@ export default function Home() {
                   <span className="font-black text-emerald-400">{contest.value}</span>
                 </div>
                 <p className="mt-3 line-clamp-2 text-xs leading-5 text-white">{contest.description}</p>
-                <div className="mt-auto flex items-center justify-center gap-2 pt-5 text-xs font-black uppercase text-white">Sprawdź promocję <ArrowUpRight size={15} className="text-red-500 transition group-hover:translate-x-1 group-hover:-translate-y-1" /></div>
+                <div className="mt-auto flex items-center justify-center gap-2 pt-5 text-xs font-black uppercase text-white">Sprawdź giveaway <ArrowUpRight size={15} className="text-red-500 transition group-hover:translate-x-1 group-hover:-translate-y-1" /></div>
               </a>
             ))}
           </div>
@@ -71,7 +71,7 @@ export default function Home() {
 
       <section id="sociale" className="mx-auto max-w-7xl px-5 py-14 md:px-8 md:py-20">
         <h2 className="text-3xl font-black md:text-5xl">Moje <span className="text-red-500">sociale</span></h2>
-        <p className="mt-3 text-sm text-white">Filmy, shorty, nowe kody i informacje o konkursach.</p>
+        <p className="mt-3 text-sm text-white">Filmy, shorty, nowe kody i informacje o giveawayach.</p>
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           <Social title="YouTube" subtitle="@Harduloo" href="https://www.youtube.com/@Harduloo" icon={<YouTubeIcon />} />
           <Social title="Instagram" subtitle="@harduloo" href="https://www.instagram.com/harduloo/" icon={<InstagramIcon />} />
