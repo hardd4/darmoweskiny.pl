@@ -5,10 +5,10 @@ import { contests } from '@/lib/contests';
 const ASSET = 'https://raw.githubusercontent.com/harddd4/Chyba-dziala-vercel-anali/main';
 
 const sites = [
-  { name: 'CSGO-SKINS', logo: `${ASSET}/csgoskins.png`, offer: '+10% DO DOŁADOWANIA', detail: '2,10 ZŁ NA START', code: 'HARDULO', href: 'https://csgo-skins.com/?ref=hardulo' },
-  { name: 'CaseHug', logo: `${ASSET}/casehug.png`, offer: '2 DARMOWE SKRZYNKI', detail: 'ODBIERZ BONUS', code: 'HARDULO', href: 'https://casehug.com/r/HARDULO' },
-  { name: 'G4Skins', logo: `${ASSET}/g4skins.png`, offer: 'DARMOWA SKRZYNKA', detail: 'DODATKOWY BONUS', code: 'HARDULO', href: 'https://g4skins.com/ref/hardulo' },
-  { name: 'Hellcase', logo: `${ASSET}/hellcase.png`, offer: 'BONUS DO DOŁADOWANIA', detail: 'AKTYWUJ OFERTĘ', code: 'HARDULO', href: 'https://hellca.se/hardulo' },
+  { name: 'CSGO-SKINS', theme: 'cyan' as const, logo: `${ASSET}/csgoskins.png`, offer: '+10% DO DOŁADOWANIA', detail: '2,10 ZŁ NA START', code: 'HARDULO', href: 'https://csgo-skins.com/?ref=hardulo' },
+  { name: 'CaseHug', theme: 'red' as const, logo: `${ASSET}/casehug.png`, offer: '2 DARMOWE SKRZYNKI', detail: 'ODBIERZ BONUS', code: 'HARDULO', href: 'https://casehug.com/r/HARDULO' },
+  { name: 'G4Skins', theme: 'violet' as const, logo: `${ASSET}/g4skins.png`, offer: 'DARMOWA SKRZYNKA', detail: 'DODATKOWY BONUS', code: 'HARDULO', href: 'https://g4skins.com/ref/hardulo' },
+  { name: 'Hellcase', theme: 'orange' as const, logo: `${ASSET}/hellcase.png`, offer: 'BONUS DO DOŁADOWANIA', detail: 'AKTYWUJ OFERTĘ', code: 'HARDULO', href: 'https://hellca.se/hardulo' },
 ];
 
 export default function Home() {
