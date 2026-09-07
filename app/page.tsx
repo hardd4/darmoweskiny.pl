@@ -58,7 +58,7 @@ export default function Home() {
                   )}
                   <div className="absolute right-2 top-2 rounded-md bg-red-600/15 px-2 py-1 text-[9px] font-black tracking-widest text-red-400">LIVE</div>
                 </div>
-                <h3 className="mt-4 line-clamp-2 break-words text-sm font-black leading-5 sm:text-base">{contest.title}</h3>
+                <h3 className="mt-4 line-clamp-2 break-words text-base font-black leading-6 sm:text-lg">{contest.title}</h3>
                 <div className="mt-2 flex flex-wrap items-center justify-between gap-2 text-[11px] sm:text-xs">
                   <span className="shrink-0 whitespace-nowrap rounded bg-red-950 px-2 py-1 font-black text-red-400">{contest.badge}</span>
                   <span className="break-words text-right font-black text-emerald-400">{contest.value}</span>

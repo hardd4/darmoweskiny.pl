@@ -28,7 +28,7 @@ export default function FeaturedContest({ contest }: { contest: FeaturedContestD
   return (
     <aside className="mx-auto max-w-7xl px-4 pt-6 sm:px-5 sm:pt-8 md:px-8 md:pt-10" aria-label="Aktywny konkurs">
       <div className="featured-contest grid min-w-0 grid-cols-1 items-center gap-4 rounded-2xl border border-red-500/30 px-3 py-4 sm:grid-cols-[auto_1fr] sm:px-5 lg:grid-cols-[auto_minmax(0,1fr)_auto_auto]">
-        <div className="skin-preview relative flex h-20 w-28 max-w-full shrink-0 items-center justify-center justify-self-center overflow-hidden rounded-xl sm:justify-self-start">
+        <div className="skin-preview relative flex h-28 w-40 max-w-full shrink-0 items-center justify-center justify-self-center overflow-hidden rounded-xl sm:h-24 sm:w-36 sm:justify-self-start lg:h-20 lg:w-28">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(239,68,68,.20),transparent_62%)]" />
           {contest.image ? <img src={contest.image} alt={contest.title} className="relative h-full w-full object-contain p-2" /> : <Gift className="relative text-red-500" size={38} />}
         </div>
@@ -36,7 +36,7 @@ export default function FeaturedContest({ contest }: { contest: FeaturedContestD
         <div className="min-w-0 flex-1 text-center sm:text-left">
           <div className="text-[10px] font-black uppercase tracking-[.2em] text-red-500">Aktywny konkurs</div>
           <h2 className="mt-1 break-words text-base font-black leading-tight min-[380px]:text-lg sm:text-xl">{contest.title}</h2>
-          <div className="mt-1 text-xs font-black text-red-500">{contest.value}</div>
+          <div className="mt-2 text-base font-black leading-none text-red-400 drop-shadow-[0_0_10px_rgba(244,0,70,.45)] sm:text-lg">{contest.value}</div>
           <p className="mt-2 text-xs font-bold leading-5 text-white/80 sm:text-sm">Losowanie za:</p>
         </div>
 
