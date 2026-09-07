@@ -76,9 +76,9 @@ export default function Home() {
         <p className="mt-3 text-sm text-white">Filmy, shorty, nowe kody i informacje o giveawayach.</p>
         <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           <Social title="YouTube" subtitle="@Harduloo" href="https://www.youtube.com/@Harduloo" icon={<YouTubeIcon />} />
+          <Social title="Discord" subtitle="Dołącz do serwera" href="https://discord.gg/KwJGMAFgA7" icon={<DiscordIcon />} />
           <Social title="Instagram" subtitle="@harduloo" href="https://www.instagram.com/harduloo/" icon={<InstagramIcon />} />
           <Social title="TikTok" subtitle="@hardulo" href="https://www.tiktok.com/@hardulo" icon={<Music2 />} />
-          <Social title="Discord" subtitle="Dołącz do serwera" href="https://discord.gg/KwJGMAFgA7" icon={<DiscordIcon />} />
         </div>
       </section>
 
