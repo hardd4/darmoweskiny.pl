@@ -48,7 +48,7 @@ export default function Home() {
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {activeContests.map((contest) => (
-              <a key={contest.title} href={contest.href} target="_blank" rel="noopener noreferrer sponsored" className="group promo-card flex min-h-[330px] flex-col rounded-2xl border border-red-500/20 p-4 transition hover:-translate-y-1 hover:border-red-500/60">
+              <a key={`${contest.title}-${contest.badge}`} href={contest.href} target="_blank" rel="noopener noreferrer sponsored" className="group promo-card flex min-h-[330px] flex-col rounded-2xl border border-red-500/20 p-4 transition hover:-translate-y-1 hover:border-red-500/60">
                 <div className="skin-preview relative flex h-40 items-center justify-center overflow-hidden rounded-xl">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(239,68,68,.20),transparent_62%)]" />
                   {contest.image ? (
