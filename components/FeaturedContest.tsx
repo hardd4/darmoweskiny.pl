@@ -35,16 +35,14 @@ export default function FeaturedContest({ contest }: { contest: FeaturedContestD
         <div className="min-w-0 flex-1 text-center sm:text-left">
           <div className="text-[10px] font-black uppercase tracking-[.2em] text-red-500">Aktywny konkurs</div>
           <h2 className="mt-1 break-words text-lg font-black sm:text-xl">{contest.title}</h2>
+          <p className="mt-1 text-xs font-bold uppercase text-white">Losowanie za:</p>
         </div>
 
-        <div className="flex flex-col items-center gap-2 sm:col-span-2 sm:flex-row sm:justify-center lg:col-span-1" aria-label="Czas do losowania">
-          <span className="shrink-0 text-xs font-black uppercase text-white">Losowanie za</span>
-          <div className="flex gap-1.5 sm:gap-2">
-            <Time value={remaining?.days} label="dni" />
-            <Time value={remaining?.hours} label="godz." />
-            <Time value={remaining?.minutes} label="min" />
-            <Time value={remaining?.seconds} label="sek." />
-          </div>
+        <div className="flex justify-center gap-1.5 sm:col-span-2 sm:gap-2 lg:col-span-1" aria-label="Czas do losowania">
+          <Time value={remaining?.days} label="dni" />
+          <Time value={remaining?.hours} label="godz." />
+          <Time value={remaining?.minutes} label="min" />
+          <Time value={remaining?.seconds} label="sek." />
         </div>
 
         <a href={contest.href} target="_blank" rel="noopener noreferrer sponsored" className="flex w-full shrink-0 items-center justify-center gap-2 rounded-xl bg-red-600 px-5 py-3 text-xs font-black uppercase transition hover:bg-red-500 sm:col-span-2 lg:col-span-1 lg:w-auto">
