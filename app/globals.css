@@ -64,6 +64,13 @@ h1, h2, h3 { text-transform: uppercase; }
     linear-gradient(180deg, #0d0909, #080808);
 }
 
+.featured-contest {
+  background:
+    radial-gradient(circle at 15% 50%, rgba(220,38,38,.16), transparent 28%),
+    rgba(10, 7, 7, .92);
+  box-shadow: 0 14px 45px rgba(0,0,0,.28);
+}
+
 .skin-preview {
   background:
     linear-gradient(145deg, rgba(255,255,255,.025), transparent 45%),

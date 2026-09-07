@@ -1,6 +1,7 @@
 import { ArrowUpRight, Gift, Music2 } from 'lucide-react';
 import SiteCard from '@/components/SiteCard';
-import { contests } from '@/lib/contests';
+import FeaturedContest from '@/components/FeaturedContest';
+import { contests, featuredContest } from '@/lib/contests';
 
 const ASSET = 'https://raw.githubusercontent.com/harddd4/Chyba-dziala-vercel-anali/main';
 
@@ -26,6 +27,8 @@ export default function Home() {
           </nav>
         </div>
       </header>
+
+      <FeaturedContest contest={featuredContest} />
 
       <section id="kody" className="mx-auto max-w-7xl px-5 py-14 md:px-8 md:py-20">
         <p className="text-xs font-black uppercase tracking-[.22em] text-red-500">Kody bonusowe</p>
