@@ -63,7 +63,7 @@ export default function Home() {
                   <span className="shrink-0 whitespace-nowrap rounded bg-red-950 px-2 py-1 font-black text-red-400">{contest.badge}</span>
                   <span className="break-words text-right font-black text-emerald-400">{contest.value}</span>
                 </div>
-                <p className="mt-3 line-clamp-2 text-xs leading-5 text-white">{contest.description}</p>
+                <p className="mt-3 rounded-lg border border-red-500/20 bg-white/[.045] px-3 py-2.5 text-sm font-semibold leading-5 text-white shadow-[inset_3px_0_0_rgba(244,0,70,.8)]">{contest.description}</p>
                 <div className="mt-auto flex items-center justify-center gap-2 pt-5 text-xs font-black uppercase text-white">Sprawdź giveaway <ArrowUpRight size={15} className="text-red-500 transition group-hover:translate-x-1 group-hover:-translate-y-1" /></div>
               </a>
             ))}
