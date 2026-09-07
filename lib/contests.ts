@@ -10,6 +10,7 @@ export type Contest = {
 
 export type FeaturedContest = {
   title: string;
+  value: string;
   endsAt: string;
   href: string;
   image?: string;
@@ -19,10 +20,11 @@ export type FeaturedContest = {
 // Mały wyróżniony konkurs nad kodami.
 // Wpisz datę w formacie RRRR-MM-DDTHH:mm:ss+02:00 i ustaw active: true.
 export const featuredContest: FeaturedContest = {
-  title: 'PODGLĄD BANERA — NAZWA SKINA',
-  endsAt: '2026-09-30T20:00:00+02:00',
-  href: 'https://csgo-skins.com/',
-  image: '',
+  title: 'Paracord Knife | Crimson Web',
+  value: 'WARTOŚĆ: ~500 ZŁ',
+  endsAt: '2026-09-23T20:00:00+02:00',
+  href: 'https://csgo-skins.com/?ref=hardulo',
+  image: 'https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL6kJ_m-B1Y4OCqV6x0H-eWDHSvzOtyufRkAX_klkQm5WTTztisdCmWOg8lX8NzTeBc4BC-lIHkMe624FeKjo9Ey3jgznQesZVzO3U',
   active: true,
 };
 
