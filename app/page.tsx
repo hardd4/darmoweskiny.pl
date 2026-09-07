@@ -73,7 +73,7 @@ export default function Home() {
 
       <section id="sociale" className="mx-auto max-w-7xl px-4 pb-12 pt-7 sm:px-5 md:px-8 md:pb-20 md:pt-10">
         <h2 className="break-words text-2xl font-black sm:text-3xl md:text-5xl">Moje <span className="text-red-500">sociale</span></h2>
-        <p className="section-description mt-3 text-sm text-white md:text-base">Filmy, shorty, nowe kody i informacje o giveawayach.</p>
+        <p className="section-description mt-3 text-sm text-white md:text-base">Na nich rozdaję jeszcze więcej skinów.</p>
         <div className="mt-6 grid min-w-0 gap-4 sm:mt-8 sm:grid-cols-2 xl:grid-cols-4">
           <Social title="YouTube" subtitle="@hardulooo" href="https://www.youtube.com/@hardulooo" icon={<YouTubeIcon />} />
           <Social title="Discord" subtitle="Dołącz do serwera" href="https://discord.gg/KwJGMAFgA7" icon={<DiscordIcon />} />
