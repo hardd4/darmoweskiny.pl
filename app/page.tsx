@@ -18,7 +18,7 @@ export default function Home() {
     <main className="cosmic-site min-h-screen overflow-hidden bg-[#050505] text-white">
       <div className="star-field" aria-hidden="true" />
       <header className="border-b border-red-950/80 bg-black/70 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
+        <div className="mx-auto flex max-w-7xl items-center justify-center px-5 py-4 md:justify-between md:px-8">
           <img src={`${ASSET}/darmowe_skiny.png`} alt="Darmoweskiny.pl" className="h-auto w-[190px] md:w-[250px]" />
           <nav className="hidden gap-7 text-sm font-semibold text-white md:flex">
             <a href="#kody" className="hover:text-red-500">Kody</a>
