@@ -45,7 +45,7 @@ export const contests: Contest[] = [
     value: 'WARTOŚĆ: ~595 ZŁ',
     description: 'Wpłać minimum 10 zł na CSGO-SKINS, aby wziąć udział w konkursie.',
     href: 'https://csgo-skins.com/?ref=hardulo',
-    image: 'https://media.steampowered.com/apps/730/icons/econ/default_generated/weapon_knife_gut_so_purple_light_large.dbe6989416501166c43bd1cfb18ee835dbfa0ac7.png',
+    image: '/skins/gut-knife-ultraviolet.png',
     active: true,
   },
   {
@@ -54,7 +54,7 @@ export const contests: Contest[] = [
     value: 'WARTOŚĆ: ~943 ZŁ',
     description: 'Wpłać minimum 10 zł na CSGO-SKINS, aby wziąć udział w konkursie.',
     href: 'https://csgo-skins.com/?ref=hardulo',
-    image: 'https://skins-cdn.hltv.org/skin/H6rZU_wZhpKA4tglmenXO_.png',
+    image: '/skins/shadow-daggers-fade.png',
     active: true,
   },
   {
