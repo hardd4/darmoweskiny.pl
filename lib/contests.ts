@@ -41,11 +41,20 @@ export const contests: Contest[] = [
   },
   {
     title: 'Gut Knife | Ultraviolet (Field-Tested)',
-    badge: '24,99 ZŁ',
+    badge: '10 ZŁ',
     value: 'WARTOŚĆ: ~595 ZŁ',
-    description: 'Wpłać minimum 24,99 zł na CSGO-SKINS, aby wziąć udział w konkursie.',
+    description: 'Wpłać minimum 10 zł na CSGO-SKINS, aby wziąć udział w konkursie.',
     href: 'https://csgo-skins.com/?ref=hardulo',
     image: '/skins/gut-knife-ultraviolet.png',
+    active: true,
+  },
+  {
+    title: 'Shadow Daggers | Fade',
+    badge: '10 ZŁ',
+    value: 'WARTOŚĆ: ~943 ZŁ',
+    description: 'Wpłać minimum 10 zł na CSGO-SKINS, aby wziąć udział w konkursie.',
+    href: 'https://csgo-skins.com/?ref=hardulo',
+    image: '/skins/shadow-daggers-fade.png',
     active: true,
   },
   {
@@ -55,6 +64,15 @@ export const contests: Contest[] = [
     description: 'Wpłać minimum 24,99 zł na CSGO-SKINS, aby wziąć udział w konkursie.',
     href: 'https://csgo-skins.com/?ref=hardulo',
     image: '/skins/shadow-daggers-fade.png',
+    active: true,
+  },
+  {
+    title: 'Gut Knife | Ultraviolet (Field-Tested)',
+    badge: '24,99 ZŁ',
+    value: 'WARTOŚĆ: ~595 ZŁ',
+    description: 'Wpłać minimum 24,99 zł na CSGO-SKINS, aby wziąć udział w konkursie.',
+    href: 'https://csgo-skins.com/?ref=hardulo',
+    image: '/skins/gut-knife-ultraviolet.png',
     active: true,
   },
   {
