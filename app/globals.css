@@ -1,12 +1,15 @@
 @import "tailwindcss";
 
+@theme {
+  --color-red-400: #ff4f7d;
+  --color-red-500: #f40046;
+  --color-red-600: #f40046;
+  --color-red-950: #390012;
+}
+
 :root {
   --background: #050505;
   --foreground: #ffffff;
-  --color-red-400: #ff4f7d;
-  --color-red-500: #f40046;
-  --color-red-600: #db003f;
-  --color-red-950: #390012;
 }
 
 * { box-sizing: border-box; }
