@@ -30,7 +30,7 @@ export default function Home() {
 
       <FeaturedContest contest={featuredContest} />
 
-      <section id="kody" className="mx-auto max-w-7xl px-5 py-14 md:px-8 md:py-20">
+      <section id="kody" className="mx-auto max-w-7xl px-5 pb-7 pt-14 md:px-8 md:pb-10 md:pt-20">
         <p className="text-xs font-black uppercase tracking-[.22em] text-red-500">Kody bonusowe</p>
         <h1 className="mt-2 text-3xl font-black tracking-tight md:text-5xl">Kody do <span className="text-red-500">stron</span></h1>
         <p className="mt-3 max-w-2xl text-sm text-white md:text-base">Wybierz ofertę i kliknij <strong className="text-red-500">ODBIERZ BONUS</strong>, aby przejść na stronę.</p>
@@ -41,7 +41,7 @@ export default function Home() {
       </section>
 
       <section id="giveawaye">
-        <div className="mx-auto max-w-7xl px-5 py-14 md:px-8 md:py-20">
+        <div className="mx-auto max-w-7xl px-5 py-7 md:px-8 md:py-10">
           <div className="flex items-center gap-2 text-red-500"><Gift size={18} /><span className="text-xs font-black uppercase tracking-[.22em]">Aktualne</span></div>
           <h2 className="mt-2 text-3xl font-black md:text-5xl">Giveawaye z <span className="text-red-500">CSGO-SKINS</span></h2>
           <p className="mt-3 max-w-2xl text-sm text-white">Aktualne darmowe skrzynki i akcje dostępne na CSGO-SKINS.</p>
@@ -71,7 +71,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="sociale" className="mx-auto max-w-7xl px-5 py-14 md:px-8 md:py-20">
+      <section id="sociale" className="mx-auto max-w-7xl px-5 pb-14 pt-7 md:px-8 md:pb-20 md:pt-10">
         <h2 className="text-3xl font-black md:text-5xl">Moje <span className="text-red-500">sociale</span></h2>
         <p className="mt-3 text-sm text-white">Filmy, shorty, nowe kody i informacje o giveawayach.</p>
         <div className="mt-8 grid gap-4 md:grid-cols-3">
