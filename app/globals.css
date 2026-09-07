@@ -34,6 +34,18 @@ h1, h2, h3 { text-transform: uppercase; }
   font-weight: 500;
   line-height: 1.65;
   letter-spacing: .01em;
+  text-wrap: pretty;
+}
+
+@media (max-width: 639px) {
+  .section-description {
+    max-width: 38ch;
+    margin-top: .5rem;
+    font-size: .8125rem;
+    font-weight: 500;
+    line-height: 1.55;
+    letter-spacing: 0;
+  }
 }
 
 .cosmic-site > :not(.star-field) {
