@@ -37,7 +37,7 @@ export default function FeaturedContest({ contest }: { contest: FeaturedContestD
           <div className="text-[10px] font-black uppercase tracking-[.2em] text-red-500">Aktywny konkurs</div>
           <h2 className="mt-1 break-words text-base font-black leading-tight min-[380px]:text-lg sm:text-xl">{contest.title}</h2>
           <div className="mt-1 text-xs font-black text-red-500">{contest.value}</div>
-          <p className="mt-2 text-sm font-black uppercase tracking-wide text-white">Losowanie za:</p>
+          <p className="mt-2 text-xs font-bold leading-5 text-white/80 sm:text-sm">Losowanie za:</p>
         </div>
 
         <div className="grid w-full grid-cols-4 gap-1 sm:col-span-2 sm:gap-2 lg:col-span-1 lg:w-auto" aria-label="Czas do losowania">
