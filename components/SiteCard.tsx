@@ -32,9 +32,9 @@ export default function SiteCard({ name, logo, offer, detail, code, href, theme 
         <img src={logo} alt={name} className="max-h-20 w-auto max-w-[86%] object-contain transition duration-200 group-hover:scale-105" />
       </a>
 
-      <div className={`mt-5 min-w-0 text-center ${themes[theme]}`}>
+      <div className={`mt-5 min-w-0 rounded-lg border border-red-500/20 bg-white/[.045] px-3 py-3 text-center shadow-[inset_3px_0_0_rgba(244,0,70,.8)] ${themes[theme]}`}>
         <p className="break-words text-sm font-black leading-6 tracking-normal min-[380px]:text-base">{offer}</p>
-        <p className="mt-3 rounded-lg border border-red-500/20 bg-white/[.045] px-3 py-2.5 text-sm font-semibold leading-5 tracking-normal text-white shadow-[inset_3px_0_0_rgba(244,0,70,.8)]">
+        <p className="mt-2 text-sm font-semibold leading-5 tracking-normal text-white">
           {detail} Z KODEM <span className="font-black text-red-500">{code}</span>
         </p>
       </div>
