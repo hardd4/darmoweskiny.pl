@@ -40,7 +40,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="giveawaye" className="border-y border-red-950/60 bg-black/35">
+      <section id="giveawaye">
         <div className="mx-auto max-w-7xl px-5 py-14 md:px-8 md:py-20">
           <div className="flex items-center gap-2 text-red-500"><Gift size={18} /><span className="text-xs font-black uppercase tracking-[.22em]">Aktualne</span></div>
           <h2 className="mt-2 text-3xl font-black md:text-5xl">Giveawaye z <span className="text-red-500">CSGO-SKINS</span></h2>
@@ -81,7 +81,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-red-950/70">
+      <footer>
         <div className="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-8 md:flex-row md:items-center md:justify-between md:px-8">
           <img src={`${ASSET}/darmowe_skiny.png`} alt="Darmoweskiny" className="h-auto w-44" />
           <p className="text-xs text-white">© {new Date().getFullYear()} Darmoweskiny.pl</p>
