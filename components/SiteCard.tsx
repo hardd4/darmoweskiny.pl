@@ -24,16 +24,16 @@ export default function SiteCard({ name, logo, offer, detail, code, href, theme 
     <motion.article
       whileHover={{ y: -6 }}
       transition={{ duration: 0.18 }}
-      className="group relative flex min-h-[310px] flex-col overflow-hidden rounded-3xl border border-white/10 bg-[#0b0d0e] p-5 transition hover:border-red-500/45 hover:shadow-[0_18px_55px_rgba(244,0,70,.14)]"
+      className="group relative flex min-h-[285px] min-w-0 flex-col overflow-hidden rounded-3xl border border-white/10 bg-[#0b0d0e] p-4 transition hover:border-red-500/45 hover:shadow-[0_18px_55px_rgba(244,0,70,.14)] sm:min-h-[310px] sm:p-5"
     >
       <div className="pointer-events-none absolute left-1/2 top-4 h-36 w-36 -translate-x-1/2 rounded-full bg-red-500/10 blur-[60px]" />
 
-      <a href={href} target="_blank" rel="noopener noreferrer sponsored" className="relative flex h-28 items-center justify-center px-4" aria-label={`Odbierz bonus na ${name}`}>
+      <a href={href} target="_blank" rel="noopener noreferrer sponsored" className="relative flex h-24 items-center justify-center px-3 sm:h-28 sm:px-4" aria-label={`Odbierz bonus na ${name}`}>
         <img src={logo} alt={name} className="max-h-20 w-auto max-w-[86%] object-contain transition duration-200 group-hover:scale-105" />
       </a>
 
       <div className={`mt-5 min-w-0 text-center ${themes[theme]}`}>
-        <p className="text-base font-black leading-6 tracking-normal">{offer}</p>
+        <p className="break-words text-sm font-black leading-6 tracking-normal min-[380px]:text-base">{offer}</p>
         <p className="mt-2 text-xs font-bold leading-5 tracking-normal text-white">
           {detail} Z KODEM <span className="font-black text-red-500">{code}</span>
         </p>

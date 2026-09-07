@@ -26,21 +26,21 @@ export default function FeaturedContest({ contest }: { contest: FeaturedContestD
   if (!contest.active) return null;
 
   return (
-    <aside className="mx-auto max-w-7xl px-5 pt-8 md:px-8 md:pt-10" aria-label="Aktywny konkurs">
-      <div className="featured-contest grid grid-cols-1 items-center gap-4 rounded-2xl border border-red-500/30 px-4 py-4 sm:grid-cols-[auto_1fr] sm:px-5 lg:grid-cols-[auto_minmax(0,1fr)_auto_auto]">
-        <div className="skin-preview relative flex h-20 w-28 shrink-0 items-center justify-center justify-self-center overflow-hidden rounded-xl sm:justify-self-start">
+    <aside className="mx-auto max-w-7xl px-4 pt-6 sm:px-5 sm:pt-8 md:px-8 md:pt-10" aria-label="Aktywny konkurs">
+      <div className="featured-contest grid min-w-0 grid-cols-1 items-center gap-4 rounded-2xl border border-red-500/30 px-3 py-4 sm:grid-cols-[auto_1fr] sm:px-5 lg:grid-cols-[auto_minmax(0,1fr)_auto_auto]">
+        <div className="skin-preview relative flex h-20 w-28 max-w-full shrink-0 items-center justify-center justify-self-center overflow-hidden rounded-xl sm:justify-self-start">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(239,68,68,.20),transparent_62%)]" />
           {contest.image ? <img src={contest.image} alt={contest.title} className="relative h-full w-full object-contain p-2" /> : <Gift className="relative text-red-500" size={38} />}
         </div>
 
         <div className="min-w-0 flex-1 text-center sm:text-left">
           <div className="text-[10px] font-black uppercase tracking-[.2em] text-red-500">Aktywny konkurs</div>
-          <h2 className="mt-1 break-words text-lg font-black sm:text-xl">{contest.title}</h2>
+          <h2 className="mt-1 break-words text-base font-black leading-tight min-[380px]:text-lg sm:text-xl">{contest.title}</h2>
           <div className="mt-1 text-xs font-black text-red-500">{contest.value}</div>
           <p className="mt-1 text-xs text-white">Losowanie za:</p>
         </div>
 
-        <div className="flex justify-center gap-1.5 sm:col-span-2 sm:gap-2 lg:col-span-1" aria-label="Czas do losowania">
+        <div className="grid w-full grid-cols-4 gap-1 sm:col-span-2 sm:gap-2 lg:col-span-1 lg:w-auto" aria-label="Czas do losowania">
           <Time value={remaining?.days} label="dni" />
           <Time value={remaining?.hours} label="godz." />
           <Time value={remaining?.minutes} label="min" />
@@ -57,8 +57,8 @@ export default function FeaturedContest({ contest }: { contest: FeaturedContestD
 
 function Time({ value, label }: { value?: number; label: string }) {
   return (
-    <div className="min-w-12 rounded-lg bg-black/65 px-2 py-2 text-center">
-      <div className="font-black tabular-nums">{value === undefined ? '--' : String(value).padStart(2, '0')}</div>
+    <div className="min-w-0 rounded-lg bg-black/65 px-1 py-2 text-center sm:min-w-12 sm:px-2">
+      <div className="text-sm font-black tabular-nums sm:text-base">{value === undefined ? '--' : String(value).padStart(2, '0')}</div>
       <div className="mt-0.5 text-[8px] font-bold uppercase text-white">{label}</div>
     </div>
   );

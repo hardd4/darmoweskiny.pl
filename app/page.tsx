@@ -15,11 +15,11 @@ export default function Home() {
   const activeContests = contests.filter((contest) => contest.active);
 
   return (
-    <main className="cosmic-site min-h-screen overflow-hidden bg-[#050505] text-white">
+    <main className="cosmic-site min-h-screen overflow-x-hidden bg-[#050505] text-white">
       <div className="star-field" aria-hidden="true" />
       <header className="border-b border-red-950/80 bg-black/70 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-center px-5 py-4 md:justify-between md:px-8">
-          <img src={`${ASSET}/darmowe_skiny.png`} alt="Darmoweskiny.pl" className="h-auto w-[190px] md:w-[250px]" />
+        <div className="mx-auto flex max-w-7xl items-center justify-center px-4 py-3 sm:px-5 sm:py-4 md:justify-between md:px-8">
+          <img src={`${ASSET}/darmowe_skiny.png`} alt="Darmoweskiny.pl" className="h-auto w-[170px] max-w-full sm:w-[190px] md:w-[250px]" />
           <nav className="hidden gap-7 text-sm font-semibold text-white md:flex">
             <a href="#kody" className="hover:text-red-500">Kody</a>
             <a href="#giveawaye" className="hover:text-red-500">Giveawaye</a>
@@ -30,26 +30,26 @@ export default function Home() {
 
       <FeaturedContest contest={featuredContest} />
 
-      <section id="kody" className="mx-auto max-w-7xl px-5 pb-7 pt-14 md:px-8 md:pb-10 md:pt-20">
+      <section id="kody" className="mx-auto max-w-7xl px-4 pb-7 pt-12 sm:px-5 sm:pt-14 md:px-8 md:pb-10 md:pt-20">
         <p className="text-xs font-black uppercase tracking-[.22em] text-red-500">Kody bonusowe</p>
-        <h1 className="mt-2 text-3xl font-black tracking-tight md:text-5xl">Kody do <span className="text-red-500">stron</span></h1>
+        <h1 className="mt-2 break-words text-2xl font-black tracking-tight sm:text-3xl md:text-5xl">Kody do <span className="text-red-500">stron</span></h1>
         <p className="section-description mt-3 max-w-2xl text-sm text-white md:text-base">Wybierz ofertę i kliknij <strong className="text-red-500">ODBIERZ BONUS</strong>, aby przejść na stronę.</p>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-6 grid min-w-0 gap-4 sm:mt-8 sm:grid-cols-2 lg:grid-cols-3">
           {sites.map((site) => <SiteCard key={site.name} {...site} />)}
         </div>
       </section>
 
       <section id="giveawaye">
-        <div className="mx-auto max-w-7xl px-5 py-7 md:px-8 md:py-10">
+        <div className="mx-auto max-w-7xl px-4 py-7 sm:px-5 md:px-8 md:py-10">
           <div className="flex items-center gap-2 text-red-500"><Gift size={18} /><span className="text-xs font-black uppercase tracking-[.22em]">Aktualne</span></div>
-          <h2 className="mt-2 text-3xl font-black md:text-5xl">Giveawaye z <span className="text-red-500">CSGO-SKINS</span></h2>
+          <h2 className="mt-2 break-words text-2xl font-black leading-tight sm:text-3xl md:text-5xl">Giveawaye z <span className="text-red-500">CSGO-SKINS</span></h2>
           <p className="section-description mt-3 max-w-2xl text-sm text-white md:text-base">Aktualne darmowe skrzynki i akcje dostępne na CSGO-SKINS.</p>
 
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 grid min-w-0 gap-4 sm:mt-8 sm:grid-cols-2 lg:grid-cols-3">
             {activeContests.map((contest) => (
-              <a key={`${contest.title}-${contest.badge}`} href={contest.href} target="_blank" rel="noopener noreferrer sponsored" className="group promo-card flex min-h-[330px] flex-col rounded-2xl border border-red-500/20 p-4 transition hover:-translate-y-1 hover:border-red-500/60">
-                <div className="skin-preview relative flex h-40 items-center justify-center overflow-hidden rounded-xl">
+              <a key={`${contest.title}-${contest.badge}`} href={contest.href} target="_blank" rel="noopener noreferrer sponsored" className="group promo-card flex min-h-[300px] min-w-0 flex-col rounded-2xl border border-red-500/20 p-3.5 transition hover:-translate-y-1 hover:border-red-500/60 sm:min-h-[330px] sm:p-4">
+                <div className="skin-preview relative flex h-36 items-center justify-center overflow-hidden rounded-xl sm:h-40">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(239,68,68,.20),transparent_62%)]" />
                   {contest.image ? (
                     <img src={contest.image} alt={contest.title} className="relative h-full w-full object-contain p-3 transition group-hover:scale-105" />
@@ -58,10 +58,10 @@ export default function Home() {
                   )}
                   <div className="absolute right-2 top-2 rounded-md bg-red-600/15 px-2 py-1 text-[9px] font-black tracking-widest text-red-400">LIVE</div>
                 </div>
-                <h3 className="mt-4 truncate text-base font-black">{contest.title}</h3>
-                <div className="mt-2 flex items-center justify-between gap-3 text-xs">
-                  <span className="rounded bg-red-950 px-2 py-1 font-black text-red-400">{contest.badge}</span>
-                  <span className="font-black text-emerald-400">{contest.value}</span>
+                <h3 className="mt-4 line-clamp-2 break-words text-sm font-black leading-5 sm:text-base">{contest.title}</h3>
+                <div className="mt-2 flex flex-wrap items-center justify-between gap-2 text-[11px] sm:text-xs">
+                  <span className="shrink-0 whitespace-nowrap rounded bg-red-950 px-2 py-1 font-black text-red-400">{contest.badge}</span>
+                  <span className="break-words text-right font-black text-emerald-400">{contest.value}</span>
                 </div>
                 <p className="mt-3 line-clamp-2 text-xs leading-5 text-white">{contest.description}</p>
                 <div className="mt-auto flex items-center justify-center gap-2 pt-5 text-xs font-black uppercase text-white">Sprawdź giveaway <ArrowUpRight size={15} className="text-red-500 transition group-hover:translate-x-1 group-hover:-translate-y-1" /></div>
@@ -71,10 +71,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="sociale" className="mx-auto max-w-7xl px-5 pb-14 pt-7 md:px-8 md:pb-20 md:pt-10">
-        <h2 className="text-3xl font-black md:text-5xl">Moje <span className="text-red-500">sociale</span></h2>
+      <section id="sociale" className="mx-auto max-w-7xl px-4 pb-12 pt-7 sm:px-5 md:px-8 md:pb-20 md:pt-10">
+        <h2 className="break-words text-2xl font-black sm:text-3xl md:text-5xl">Moje <span className="text-red-500">sociale</span></h2>
         <p className="section-description mt-3 text-sm text-white md:text-base">Filmy, shorty, nowe kody i informacje o giveawayach.</p>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-6 grid min-w-0 gap-4 sm:mt-8 sm:grid-cols-2 xl:grid-cols-4">
           <Social title="YouTube" subtitle="@Harduloo" href="https://www.youtube.com/@Harduloo" icon={<YouTubeIcon />} />
           <Social title="Discord" subtitle="Dołącz do serwera" href="https://discord.gg/KwJGMAFgA7" icon={<DiscordIcon />} />
           <Social title="Instagram" subtitle="@harduloo" href="https://www.instagram.com/harduloo/" icon={<InstagramIcon />} />
@@ -83,8 +83,8 @@ export default function Home() {
       </section>
 
       <footer>
-        <div className="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-8 md:flex-row md:items-center md:justify-between md:px-8">
-          <img src={`${ASSET}/darmowe_skiny.png`} alt="Darmoweskiny" className="h-auto w-44" />
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-4 py-8 text-center sm:px-5 md:flex-row md:justify-between md:px-8 md:text-left">
+          <img src={`${ASSET}/darmowe_skiny.png`} alt="Darmoweskiny" className="h-auto w-40 max-w-full sm:w-44" />
           <p className="text-xs text-white">© {new Date().getFullYear()} Darmoweskiny.pl</p>
         </div>
       </footer>
@@ -121,9 +121,9 @@ function DiscordIcon() {
 
 function Social({ title, subtitle, href, icon }: { title: string; subtitle: string; href: string; icon: React.ReactNode }) {
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-between rounded-2xl border border-white/10 bg-[#0a0a0a] p-5 transition hover:border-red-500/40 hover:bg-red-950/20">
-      <div className="flex items-center gap-4"><div className="flex h-12 w-12 items-center justify-center rounded-xl bg-red-600 text-white">{icon}</div><div><div className="font-black">{title}</div><div className="mt-1 text-xs text-white">{subtitle}</div></div></div>
-      <ArrowUpRight size={20} className="text-zinc-600 transition group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-red-500" />
+    <a href={href} target="_blank" rel="noopener noreferrer" className="group flex min-w-0 items-center justify-between gap-3 rounded-2xl border border-white/10 bg-[#0a0a0a] p-4 transition hover:border-red-500/40 hover:bg-red-950/20 sm:p-5">
+      <div className="flex min-w-0 items-center gap-3 sm:gap-4"><div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-red-600 text-white sm:h-12 sm:w-12">{icon}</div><div className="min-w-0"><div className="truncate font-black">{title}</div><div className="mt-1 truncate text-xs text-white">{subtitle}</div></div></div>
+      <ArrowUpRight size={20} className="shrink-0 text-zinc-600 transition group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-red-500" />
     </a>
   );
 }
