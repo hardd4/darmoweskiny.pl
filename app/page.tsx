@@ -74,10 +74,11 @@ export default function Home() {
       <section id="sociale" className="mx-auto max-w-7xl px-5 pb-14 pt-7 md:px-8 md:pb-20 md:pt-10">
         <h2 className="text-3xl font-black md:text-5xl">Moje <span className="text-red-500">sociale</span></h2>
         <p className="mt-3 text-sm text-white">Filmy, shorty, nowe kody i informacje o giveawayach.</p>
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           <Social title="YouTube" subtitle="@Harduloo" href="https://www.youtube.com/@Harduloo" icon={<YouTubeIcon />} />
           <Social title="Instagram" subtitle="@harduloo" href="https://www.instagram.com/harduloo/" icon={<InstagramIcon />} />
           <Social title="TikTok" subtitle="@hardulo" href="https://www.tiktok.com/@hardulo" icon={<Music2 />} />
+          <Social title="Discord" subtitle="Dołącz do serwera" href="https://discord.gg/KwJGMAFgA7" icon={<DiscordIcon />} />
         </div>
       </section>
 
@@ -106,6 +107,14 @@ function InstagramIcon() {
       <rect x="3" y="3" width="18" height="18" rx="5" />
       <circle cx="12" cy="12" r="4" />
       <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+function DiscordIcon() {
+  return (
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+      <path d="M19.5 5.4A16.3 16.3 0 0 0 15.4 4l-.5 1a15 15 0 0 0-5.8 0l-.5-1a16.3 16.3 0 0 0-4.1 1.4C1.9 9.2 1.2 12.9 1.5 16.5a16.5 16.5 0 0 0 5 2.5l1.2-1.7-1.8-.9.4-.3a11.7 11.7 0 0 0 11.4 0l.4.3-1.8.9 1.2 1.7a16.5 16.5 0 0 0 5-2.5c.4-4.2-.7-7.8-3-11.1ZM8.6 14.8c-1.4 0-2.5-1.3-2.5-2.8s1.1-2.8 2.5-2.8 2.5 1.3 2.5 2.8-1.1 2.8-2.5 2.8Zm6.8 0c-1.4 0-2.5-1.3-2.5-2.8s1.1-2.8 2.5-2.8 2.5 1.3 2.5 2.8-1.1 2.8-2.5 2.8Z" />
     </svg>
   );
 }
