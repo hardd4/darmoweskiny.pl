@@ -33,11 +33,9 @@ export default function SiteCard({ name, logo, offer, detail, code, href, theme 
       </a>
 
       <div className={`mt-3 text-center ${themes[theme]}`}>
-        <p className="text-base font-black leading-tight">{offer}</p>
-        <div className="mx-auto my-3 h-px w-10 bg-current opacity-30" />
-        <p className="text-xs font-bold leading-5 text-white">{detail}</p>
-        <p className="mt-1 text-[11px] font-bold uppercase tracking-wide text-white">
-          Z KODEM <span className="text-red-500">{code}</span>
+        <p className="text-lg font-extrabold leading-6 tracking-normal">{offer}</p>
+        <p className="mt-3 min-h-12 text-sm font-semibold leading-6 tracking-normal text-white">
+          {detail} Z KODEM <span className="font-extrabold text-red-500">{code}</span>
         </p>
       </div>
 
