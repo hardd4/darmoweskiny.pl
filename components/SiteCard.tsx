@@ -24,21 +24,21 @@ export default function SiteCard({ name, logo, offer, detail, code, href, theme 
     <motion.article
       whileHover={{ y: -3 }}
       transition={{ duration: 0.18 }}
-      className="group relative flex min-h-[190px] flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#0b0d0e] p-4 transition hover:border-red-500/40"
+      className="group relative flex min-h-[275px] flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#0b0d0e] p-4 transition hover:border-red-500/40"
     >
       <div className="pointer-events-none absolute right-0 top-0 h-24 w-24 bg-red-600/10 blur-[50px]" />
 
-      <div className="relative flex items-center gap-4">
-        <a href={href} target="_blank" rel="noopener noreferrer sponsored" className="flex h-20 w-24 shrink-0 items-center justify-center rounded-xl border border-white/[.06] bg-black/55 p-2 transition hover:border-red-500/35" aria-label={`Odbierz bonus na ${name}`}>
-          <img src={logo} alt={name} className="max-h-14 w-auto max-w-full object-contain" />
-        </a>
-        <div className={`min-w-0 flex-1 ${themes[theme]}`}>
-          <span className="inline-flex rounded-md bg-white/[.06] px-2 py-1 text-[9px] font-black uppercase tracking-wider text-white">Oferta</span>
-          <p className="mt-2 text-sm font-black">{offer}</p>
-          <p className="mt-1 text-[11px] font-bold leading-5 text-white">
-            {detail} Z KODEM <span className="text-red-500">{code}</span>
-          </p>
-        </div>
+      <a href={href} target="_blank" rel="noopener noreferrer sponsored" className="relative flex h-24 items-center justify-center rounded-xl transition hover:bg-white/[.025]" aria-label={`Odbierz bonus na ${name}`}>
+        <img src={logo} alt={name} className="max-h-16 w-auto max-w-[82%] object-contain" />
+      </a>
+
+      <div className={`mt-3 text-center ${themes[theme]}`}>
+        <p className="text-base font-black leading-tight">{offer}</p>
+        <div className="mx-auto my-3 h-px w-10 bg-current opacity-30" />
+        <p className="text-xs font-bold leading-5 text-white">{detail}</p>
+        <p className="mt-1 text-[11px] font-bold uppercase tracking-wide text-white">
+          Z KODEM <span className="text-red-500">{code}</span>
+        </p>
       </div>
 
       <div className="mt-auto pt-4">
