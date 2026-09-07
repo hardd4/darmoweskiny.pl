@@ -19,11 +19,11 @@ export type FeaturedContest = {
 // Mały wyróżniony konkurs nad kodami.
 // Wpisz datę w formacie RRRR-MM-DDTHH:mm:ss+02:00 i ustaw active: true.
 export const featuredContest: FeaturedContest = {
-  title: 'NAZWA SKINA',
+  title: 'PODGLĄD BANERA — NAZWA SKINA',
   endsAt: '2026-09-30T20:00:00+02:00',
   href: 'https://csgo-skins.com/',
   image: '',
-  active: false,
+  active: true,
 };
 
 // Tutaj dodajesz i edytujesz konkursy.
