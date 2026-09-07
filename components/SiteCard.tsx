@@ -22,24 +22,24 @@ const themes = {
 export default function SiteCard({ name, logo, offer, detail, code, href, theme }: Props) {
   return (
     <motion.article
-      whileHover={{ x: 3 }}
+      whileHover={{ y: -6 }}
       transition={{ duration: 0.18 }}
-      className="group relative grid grid-cols-1 items-center gap-4 overflow-hidden rounded-2xl border border-white/10 bg-[#0b0d0e] p-4 transition hover:border-red-500/40 sm:grid-cols-[170px_minmax(0,1fr)_190px] sm:gap-6"
+      className="group relative flex min-h-[310px] flex-col overflow-hidden rounded-3xl border border-white/10 bg-[#0b0d0e] p-5 transition hover:border-red-500/45 hover:shadow-[0_18px_55px_rgba(244,0,70,.14)]"
     >
-      <div className="pointer-events-none absolute right-0 top-0 h-full w-40 bg-red-600/10 blur-[55px]" />
+      <div className="pointer-events-none absolute left-1/2 top-4 h-36 w-36 -translate-x-1/2 rounded-full bg-red-500/10 blur-[60px]" />
 
-      <a href={href} target="_blank" rel="noopener noreferrer sponsored" className="relative flex h-20 items-center justify-center rounded-xl bg-black/35 px-3 transition hover:bg-white/[.035]" aria-label={`Odbierz bonus na ${name}`}>
-        <img src={logo} alt={name} className="max-h-14 w-auto max-w-full object-contain" />
+      <a href={href} target="_blank" rel="noopener noreferrer sponsored" className="relative flex h-28 items-center justify-center rounded-2xl bg-black/30 px-4 transition hover:bg-white/[.025]" aria-label={`Odbierz bonus na ${name}`}>
+        <img src={logo} alt={name} className="max-h-20 w-auto max-w-[86%] object-contain transition duration-200 group-hover:scale-105" />
       </a>
 
-      <div className={`min-w-0 text-center sm:text-left ${themes[theme]}`}>
-        <p className="text-base font-black leading-6 tracking-normal sm:text-lg">{offer}</p>
-        <p className="mt-1 text-xs font-bold leading-5 tracking-normal text-white sm:text-sm">
+      <div className={`mt-5 min-w-0 text-center ${themes[theme]}`}>
+        <p className="text-base font-black leading-6 tracking-normal">{offer}</p>
+        <p className="mt-2 text-xs font-bold leading-5 tracking-normal text-white">
           {detail} Z KODEM <span className="font-black text-red-500">{code}</span>
         </p>
       </div>
 
-      <div className="relative">
+      <div className="relative mt-auto pt-5">
         <a href={href} target="_blank" rel="noopener noreferrer sponsored" className="flex w-full items-center justify-center gap-2 rounded-xl bg-red-600 px-4 py-3 text-sm font-black uppercase text-white transition hover:bg-red-500 active:scale-[.98]">
           Odbierz bonus <ArrowUpRight size={17} />
         </a>

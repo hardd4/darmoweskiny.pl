@@ -35,7 +35,7 @@ export default function Home() {
         <h1 className="mt-2 text-3xl font-black tracking-tight md:text-5xl">Kody do <span className="text-red-500">stron</span></h1>
         <p className="mt-3 max-w-2xl text-sm text-white md:text-base">Wybierz ofertę i kliknij <strong className="text-red-500">ODBIERZ BONUS</strong>, aby przejść na stronę.</p>
 
-        <div className="mt-8 grid gap-3">
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {sites.map((site) => <SiteCard key={site.name} {...site} />)}
         </div>
       </section>
