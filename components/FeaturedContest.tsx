@@ -36,7 +36,7 @@ export default function FeaturedContest({ contest }: { contest: FeaturedContestD
         <div className="min-w-0 flex-1 text-center sm:text-left">
           <div className="text-[10px] font-black uppercase tracking-[.2em] text-red-500">Aktywny konkurs</div>
           <h2 className="mt-1 break-words text-base font-black leading-tight min-[380px]:text-lg sm:text-xl">{contest.title}</h2>
-          <div className="mt-2 text-base font-black leading-none text-red-400 drop-shadow-[0_0_10px_rgba(244,0,70,.45)] sm:text-lg">{contest.value}</div>
+          <div className="mt-2 text-base font-black leading-none text-red-500 drop-shadow-[0_0_10px_rgba(244,0,70,.45)] sm:text-lg">{contest.value}</div>
           <p className="mt-2 text-xs font-bold leading-5 text-white/80 sm:text-sm">Losowanie za:</p>
         </div>
 
