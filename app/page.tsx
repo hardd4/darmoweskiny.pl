@@ -7,7 +7,7 @@ const ASSET = 'https://raw.githubusercontent.com/harddd4/Chyba-dziala-vercel-ana
 
 const sites = [
   { name: 'CSGO-SKINS', theme: 'cyan' as const, logo: `${ASSET}/csgoskins.png`, offer: '+10% DO DOŁADOWANIA', detail: '2,10 ZŁ NA START', code: 'HARDULO', href: 'https://csgo-skins.com/?ref=hardulo' },
-  { name: 'CaseHug', theme: 'red' as const, logo: `${ASSET}/casehug.png`, offer: '2 DARMOWE SKRZYNKI', detail: 'ODBIERZ BONUS', code: 'HARDULO', href: 'https://casehug.com/r/HARDULO' },
+  { name: 'CaseHug', theme: 'red' as const, logo: `${ASSET}/casehug.png`, offer: '+20% DO DOŁADOWANIA', detail: '4 ZŁ NA START', code: 'HARDULO', href: 'https://casehug.com/r/HARDULO' },
   { name: 'G4Skins', theme: 'violet' as const, logo: `${ASSET}/g4skins.png`, offer: 'DARMOWA SKRZYNKA', detail: 'DODATKOWY BONUS', code: 'HARDULO', href: 'https://g4skins.com/ref/hardulo' },
 ];
 
