@@ -1,6 +1,13 @@
 import type { Metadata } from 'next';
+import { Manrope } from 'next/font/google';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import './globals.css';
+
+const manrope = Manrope({
+  subsets: ['latin', 'latin-ext'],
+  display: 'swap',
+  variable: '--font-manrope',
+});
 
 export const metadata: Metadata = {
   title: 'Darmoweskiny.pl — kody i giveawaye CS2',
@@ -33,7 +40,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pl">
-      <body>
+      <body className={manrope.variable}>
         {children}
         <GoogleAnalytics />
       </body>
