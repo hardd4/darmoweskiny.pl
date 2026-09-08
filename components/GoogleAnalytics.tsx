@@ -58,7 +58,14 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '${META_PIXEL_ID}');
-fbq('track', 'PageView');`}
+const pageViewEventId = crypto.randomUUID();
+fbq('track', 'PageView', {}, {eventID: pageViewEventId});
+fetch('/api/meta-event', {
+  method: 'POST',
+  headers: {'Content-Type': 'application/json'},
+  body: JSON.stringify({eventName: 'PageView', eventId: pageViewEventId, eventSourceUrl: location.href, data: {}}),
+  keepalive: true
+});`}
           </Script>
         </>
       )}

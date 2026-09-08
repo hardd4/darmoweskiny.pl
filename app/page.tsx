@@ -1,6 +1,7 @@
 import { ArrowUpRight, Gift, Music2 } from 'lucide-react';
 import SiteCard from '@/components/SiteCard';
 import FeaturedContest from '@/components/FeaturedContest';
+import TrackedLink from '@/components/TrackedLink';
 import { contests, featuredContest } from '@/lib/contests';
 
 const ASSET = 'https://raw.githubusercontent.com/harddd4/Chyba-dziala-vercel-anali/main';
@@ -48,7 +49,7 @@ export default function Home() {
 
           <div className="mt-6 grid min-w-0 gap-4 sm:mt-8 sm:grid-cols-2 lg:grid-cols-3">
             {activeContests.map((contest) => (
-              <a key={`${contest.title}-${contest.badge}`} href={contest.href} target="_blank" rel="noopener noreferrer sponsored" className="group promo-card flex min-h-[300px] min-w-0 flex-col rounded-2xl border border-red-500/20 p-3.5 transition hover:-translate-y-1 hover:border-red-500/60 sm:min-h-[330px] sm:p-4">
+              <TrackedLink key={`${contest.title}-${contest.badge}`} eventName="GiveawayClick" eventData={{ item: contest.title, value: contest.value, minimum_deposit: contest.badge }} href={contest.href} target="_blank" rel="noopener noreferrer sponsored" className="group promo-card flex min-h-[300px] min-w-0 flex-col rounded-2xl border border-red-500/20 p-3.5 transition hover:-translate-y-1 hover:border-red-500/60 sm:min-h-[330px] sm:p-4">
                 <div className="skin-preview relative flex h-36 items-center justify-center overflow-hidden rounded-xl sm:h-40">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(239,68,68,.20),transparent_62%)]" />
                   {contest.image ? (
@@ -65,7 +66,7 @@ export default function Home() {
                 </div>
                 <p className="mt-3 rounded-lg border border-red-500/20 bg-white/[.045] px-3 py-2.5 text-sm font-semibold leading-5 text-white shadow-[inset_3px_0_0_rgba(244,0,70,.8)]">{contest.description}</p>
                 <div className="mt-auto flex items-center justify-center gap-2 pt-5 text-xs font-black uppercase text-white">Sprawdź giveaway <ArrowUpRight size={15} className="text-red-500 transition group-hover:translate-x-1 group-hover:-translate-y-1" /></div>
-              </a>
+              </TrackedLink>
             ))}
           </div>
         </div>
@@ -121,9 +122,9 @@ function DiscordIcon() {
 
 function Social({ title, subtitle, href, icon }: { title: string; subtitle: string; href: string; icon: React.ReactNode }) {
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" className="group flex min-w-0 items-center justify-between gap-3 rounded-2xl border border-white/10 bg-[#0a0a0a] p-4 transition hover:border-red-500/40 hover:bg-red-950/20 sm:p-5">
+    <TrackedLink eventName="SocialClick" eventData={{ platform: title }} href={href} target="_blank" rel="noopener noreferrer" className="group flex min-w-0 items-center justify-between gap-3 rounded-2xl border border-white/10 bg-[#0a0a0a] p-4 transition hover:border-red-500/40 hover:bg-red-950/20 sm:p-5">
       <div className="flex min-w-0 items-center gap-3 sm:gap-4"><div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-red-600 text-white sm:h-12 sm:w-12">{icon}</div><div className="min-w-0"><div className="truncate font-black">{title}</div><div className="mt-1 truncate text-xs text-white">{subtitle}</div></div></div>
       <ArrowUpRight size={20} className="shrink-0 text-zinc-600 transition group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-red-500" />
-    </a>
+    </TrackedLink>
   );
 }

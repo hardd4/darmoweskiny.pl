@@ -3,6 +3,7 @@
 import { ArrowUpRight, Gift } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import type { FeaturedContest as FeaturedContestData } from '@/lib/contests';
+import TrackedLink from '@/components/TrackedLink';
 
 function getRemaining(endsAt: string) {
   const difference = Math.max(0, new Date(endsAt).getTime() - Date.now());
@@ -47,9 +48,9 @@ export default function FeaturedContest({ contest }: { contest: FeaturedContestD
           <Time value={remaining?.seconds} label="sek." />
         </div>
 
-        <a href={contest.href} target="_blank" rel="noopener noreferrer sponsored" className="flex w-full shrink-0 items-center justify-center gap-2 rounded-xl bg-red-600 px-5 py-3 text-xs font-black uppercase transition hover:bg-red-500 sm:col-span-2 lg:col-span-1 lg:w-auto">
+        <TrackedLink eventName="ActiveGiveawayClick" eventData={{ item: contest.title, value: contest.value }} href={contest.href} target="_blank" rel="noopener noreferrer sponsored" className="flex w-full shrink-0 items-center justify-center gap-2 rounded-xl bg-red-600 px-5 py-3 text-xs font-black uppercase transition hover:bg-red-500 sm:col-span-2 lg:col-span-1 lg:w-auto">
           Zobacz konkurs <ArrowUpRight size={15} />
-        </a>
+        </TrackedLink>
       </div>
     </aside>
   );
