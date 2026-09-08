@@ -1,4 +1,5 @@
 import { ArrowUpRight, Gift, Music2 } from 'lucide-react';
+import Link from 'next/link';
 import SiteCard from '@/components/SiteCard';
 import FeaturedContest from '@/components/FeaturedContest';
 import TrackedLink from '@/components/TrackedLink';
@@ -90,7 +91,10 @@ export default function Home() {
       <footer>
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-4 py-8 text-center sm:px-5 md:flex-row md:justify-between md:px-8 md:text-left">
           <img src={`${ASSET}/darmowe_skiny.png`} alt="Darmoweskiny.pl" loading="lazy" decoding="async" className="h-auto w-40 max-w-full sm:w-44" />
-          <p className="text-xs text-white">© {new Date().getFullYear()} Darmoweskiny.pl</p>
+          <div className="flex flex-col items-center gap-2 text-xs text-white md:items-end">
+            <p>© {new Date().getFullYear()} Darmoweskiny.pl</p>
+            <Link href="/polityka-prywatnosci" className="text-white/70 underline decoration-white/30 underline-offset-2 transition hover:text-white">Polityka prywatności</Link>
+          </div>
         </div>
       </footer>
     </main>

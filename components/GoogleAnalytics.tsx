@@ -1,6 +1,7 @@
 'use client';
 
 import Script from 'next/script';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 const MEASUREMENT_ID = 'G-DT3SCN8P6R';
@@ -73,7 +74,10 @@ fetch('/api/meta-event', {
       {showSettings ? (
         <div className="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-xl rounded-2xl border border-white/15 bg-[#0b090a]/95 p-4 text-white shadow-2xl shadow-black/60 backdrop-blur sm:inset-x-5 sm:bottom-5 sm:p-5" role="dialog" aria-label="Ustawienia cookies" aria-live="polite">
           <p className="text-sm font-black">Ta strona używa plików cookies</p>
-          <p className="mt-1.5 text-xs leading-5 text-white/80 sm:text-sm">Używamy cookies analitycznych, aby lepiej rozumieć, jak odwiedzasz stronę.</p>
+          <p className="mt-1.5 text-xs leading-5 text-white/80 sm:text-sm">
+            Używamy cookies analitycznych, aby lepiej rozumieć, jak odwiedzasz stronę.{' '}
+            <Link href="/polityka-prywatnosci" className="font-bold text-red-400 underline decoration-red-500/50 underline-offset-2 hover:text-red-300">Polityka prywatności</Link>
+          </p>
           <div className="mt-4 grid grid-cols-2 gap-2">
             <button type="button" onClick={() => chooseConsent('declined')} className="min-h-11 rounded-xl border border-white/15 px-3 py-2 text-xs font-black uppercase transition hover:bg-white/10">Odrzuć</button>
             <button type="button" onClick={() => chooseConsent('accepted')} className="min-h-11 rounded-xl bg-red-600 px-3 py-2 text-xs font-black uppercase transition hover:bg-red-500">Akceptuj</button>
