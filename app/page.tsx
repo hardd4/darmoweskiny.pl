@@ -33,7 +33,7 @@ export default function Home() {
 
       <section id="kody" className="mx-auto max-w-7xl px-4 pb-7 pt-12 sm:px-5 sm:pt-14 md:px-8 md:pb-10 md:pt-20">
         <p className="text-xs font-black uppercase tracking-[.22em] text-red-500">Kody bonusowe</p>
-        <h1 className="mt-2 break-words text-2xl font-black tracking-tight sm:text-3xl md:text-5xl">Kody do <span className="text-red-500">stron</span></h1>
+        <h1 className="mt-2 break-words text-2xl font-black tracking-[.015em] sm:text-3xl md:text-5xl">Kody do <span className="text-red-500">stron</span></h1>
         <p className="section-description mt-3 max-w-2xl text-sm text-white md:text-base">Wybierz ofertę i kliknij <strong className="text-red-500">ODBIERZ BONUS</strong>, aby przejść na stronę.</p>
 
         <div className="mt-6 grid min-w-0 gap-4 sm:mt-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -44,7 +44,7 @@ export default function Home() {
       <section id="giveawaye">
         <div className="mx-auto max-w-7xl px-4 py-7 sm:px-5 md:px-8 md:py-10">
           <div className="flex items-center gap-2 text-red-500"><Gift size={18} /><span className="text-xs font-black uppercase tracking-[.22em]">Aktualne</span></div>
-          <h2 className="mt-2 break-words text-2xl font-black leading-tight sm:text-3xl md:text-5xl">Giveawaye z <span className="text-red-500">CSGO-SKINS</span></h2>
+          <h2 className="mt-2 break-words text-2xl font-black leading-tight tracking-[.015em] sm:text-3xl md:text-5xl">Giveawaye z <span className="text-red-500">CSGO-SKINS</span></h2>
           <p className="section-description mt-3 max-w-2xl text-sm text-white md:text-base">Aktualne darmowe skrzynki i akcje dostępne na CSGO-SKINS.</p>
 
           <div className="mt-6 grid min-w-0 gap-4 sm:mt-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -59,13 +59,17 @@ export default function Home() {
                   )}
                   <div className="absolute right-2 top-2 rounded-md bg-red-600/15 px-2 py-1 text-[9px] font-black tracking-widest text-red-400">LIVE</div>
                 </div>
-                <h3 className="mt-4 line-clamp-2 break-words text-base font-black leading-6 sm:text-lg">{contest.title}</h3>
+                <h3 className="mt-4 line-clamp-2 break-words text-base font-black leading-6 tracking-[.015em] sm:text-lg">{contest.title}</h3>
                 <div className="mt-2 flex flex-wrap items-center justify-between gap-2 text-[11px] sm:text-xs">
                   <span className="shrink-0 whitespace-nowrap rounded bg-red-950 px-2 py-1 font-black text-red-400">{contest.badge}</span>
                   <span className="break-words text-right font-black text-emerald-400">{contest.value}</span>
                 </div>
-                <p className="mt-3 rounded-lg border border-red-500/20 bg-white/[.045] px-3 py-2.5 text-sm font-semibold leading-5 text-white shadow-[inset_3px_0_0_rgba(244,0,70,.8)]">{contest.description}</p>
-                <div className="mt-auto flex items-center justify-center gap-2 pt-5 text-xs font-black uppercase text-white">Sprawdź giveaway <ArrowUpRight size={15} className="text-red-500 transition group-hover:translate-x-1 group-hover:-translate-y-1" /></div>
+                <p className="mt-3 rounded-lg border border-red-500/20 bg-white/[.045] px-3 py-2.5 text-sm font-semibold leading-5 text-white shadow-[inset_3px_0_0_rgba(244,0,70,.8)]">
+                  {contest.description.split('HARDULO')[0]}
+                  <strong className="font-black text-red-500">HARDULO</strong>
+                  {contest.description.split('HARDULO')[1]}
+                </p>
+                <div className="mt-auto flex items-center justify-center gap-2 pt-5 text-xs font-black uppercase text-white">Weź udział <ArrowUpRight size={15} className="text-red-500 transition group-hover:translate-x-1 group-hover:-translate-y-1" /></div>
               </TrackedLink>
             ))}
           </div>
@@ -73,7 +77,7 @@ export default function Home() {
       </section>
 
       <section id="sociale" className="mx-auto max-w-7xl px-4 pb-12 pt-7 sm:px-5 md:px-8 md:pb-20 md:pt-10">
-        <h2 className="break-words text-2xl font-black sm:text-3xl md:text-5xl">Moje <span className="text-red-500">sociale</span></h2>
+        <h2 className="break-words text-2xl font-black tracking-[.015em] sm:text-3xl md:text-5xl">Moje <span className="text-red-500">sociale</span></h2>
         <p className="section-description mt-3 text-sm text-white md:text-base">Na nich rozdaję jeszcze więcej skinów.</p>
         <div className="mt-6 grid min-w-0 gap-4 sm:mt-8 sm:grid-cols-2 xl:grid-cols-4">
           <Social title="YouTube" subtitle="@hardulooo" href="https://www.youtube.com/@hardulooo" icon={<YouTubeIcon />} />
