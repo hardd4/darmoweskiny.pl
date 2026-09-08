@@ -52,7 +52,7 @@ export default function Home() {
                 <div className="skin-preview relative flex h-36 items-center justify-center overflow-hidden rounded-xl sm:h-40">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(239,68,68,.20),transparent_62%)]" />
                   {contest.image ? (
-                    <img src={contest.image} alt={contest.title} className="relative h-full w-full object-contain p-3 transition group-hover:scale-105" />
+                    <img src={contest.image} alt={contest.title} loading="lazy" decoding="async" className="relative h-full w-full object-contain p-3 transition group-hover:scale-105" />
                   ) : (
                     <Gift size={76} strokeWidth={1.15} className="relative text-red-500/75 drop-shadow-[0_0_24px_rgba(239,68,68,.35)] transition group-hover:scale-110" />
                   )}
@@ -84,7 +84,7 @@ export default function Home() {
 
       <footer>
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-4 py-8 text-center sm:px-5 md:flex-row md:justify-between md:px-8 md:text-left">
-          <img src={`${ASSET}/darmowe_skiny.png`} alt="Darmoweskiny" className="h-auto w-40 max-w-full sm:w-44" />
+          <img src={`${ASSET}/darmowe_skiny.png`} alt="Darmoweskiny.pl" loading="lazy" decoding="async" className="h-auto w-40 max-w-full sm:w-44" />
           <p className="text-xs text-white">© {new Date().getFullYear()} Darmoweskiny.pl</p>
         </div>
       </footer>

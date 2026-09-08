@@ -47,7 +47,7 @@ export const contests: Contest[] = [
     value: 'WARTOŚĆ: ~943 ZŁ',
     description: 'Wpłać minimum 10 zł na CSGO-SKINS, aby wziąć udział w konkursie.',
     href: 'https://csgo-skins.com/?ref=hardulo',
-    image: '/skins/shadow-daggers-fade.png',
+    image: '/skins/shadow-daggers-fade.webp',
     active: true,
   },
   {
@@ -56,7 +56,7 @@ export const contests: Contest[] = [
     value: 'WARTOŚĆ: ~943 ZŁ',
     description: 'Wpłać minimum 24,99 zł na CSGO-SKINS, aby wziąć udział w konkursie.',
     href: 'https://csgo-skins.com/?ref=hardulo',
-    image: '/skins/shadow-daggers-fade.png',
+    image: '/skins/shadow-daggers-fade.webp',
     active: true,
   },
   {
@@ -65,7 +65,7 @@ export const contests: Contest[] = [
     value: 'WARTOŚĆ: ~595 ZŁ',
     description: 'Wpłać minimum 10 zł na CSGO-SKINS, aby wziąć udział w konkursie.',
     href: 'https://csgo-skins.com/?ref=hardulo',
-    image: '/skins/gut-knife-ultraviolet.png',
+    image: '/skins/gut-knife-ultraviolet.webp',
     active: true,
   },
   {
@@ -74,7 +74,7 @@ export const contests: Contest[] = [
     value: 'WARTOŚĆ: ~595 ZŁ',
     description: 'Wpłać minimum 24,99 zł na CSGO-SKINS, aby wziąć udział w konkursie.',
     href: 'https://csgo-skins.com/?ref=hardulo',
-    image: '/skins/gut-knife-ultraviolet.png',
+    image: '/skins/gut-knife-ultraviolet.webp',
     active: true,
   },
   {

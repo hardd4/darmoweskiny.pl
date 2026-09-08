@@ -29,7 +29,7 @@ export default function SiteCard({ name, logo, offer, detail, code, href, theme 
       <div className="pointer-events-none absolute left-1/2 top-4 h-36 w-36 -translate-x-1/2 rounded-full bg-red-500/10 blur-[60px]" />
 
       <a href={href} target="_blank" rel="noopener noreferrer sponsored" className="relative flex h-24 items-center justify-center px-3 sm:h-28 sm:px-4" aria-label={`Odbierz bonus na ${name}`}>
-        <img src={logo} alt={name} className="max-h-20 w-auto max-w-[86%] object-contain transition duration-200 group-hover:scale-105" />
+        <img src={logo} alt={name} loading="lazy" decoding="async" className="max-h-20 w-auto max-w-[86%] object-contain transition duration-200 group-hover:scale-105" />
       </a>
 
       <div className={`mt-5 min-w-0 rounded-lg border border-red-500/20 bg-white/[.045] px-3 py-3 text-center shadow-[inset_3px_0_0_rgba(244,0,70,.8)] ${themes[theme]}`}>

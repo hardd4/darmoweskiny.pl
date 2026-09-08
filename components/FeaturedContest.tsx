@@ -30,7 +30,7 @@ export default function FeaturedContest({ contest }: { contest: FeaturedContestD
       <div className="featured-contest grid min-w-0 grid-cols-1 items-center gap-4 rounded-2xl border border-red-500/30 px-3 py-4 sm:grid-cols-[auto_1fr] sm:px-5 lg:grid-cols-[auto_minmax(0,1fr)_auto_auto]">
         <div className="skin-preview relative flex h-28 w-40 max-w-full shrink-0 items-center justify-center justify-self-center overflow-hidden rounded-xl sm:h-24 sm:w-36 sm:justify-self-start lg:h-20 lg:w-28">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(239,68,68,.20),transparent_62%)]" />
-          {contest.image ? <img src={contest.image} alt={contest.title} className="relative h-full w-full object-contain p-2" /> : <Gift className="relative text-red-500" size={38} />}
+          {contest.image ? <img src={contest.image} alt={contest.title} fetchPriority="high" decoding="async" className="relative h-full w-full object-contain p-2" /> : <Gift className="relative text-red-500" size={38} />}
         </div>
 
         <div className="min-w-0 flex-1 text-center sm:text-left">
