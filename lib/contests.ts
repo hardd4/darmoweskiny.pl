@@ -20,11 +20,11 @@ export type FeaturedContest = {
 // Mały wyróżniony konkurs nad kodami.
 // Wpisz datę w formacie RRRR-MM-DDTHH:mm:ss+02:00 i ustaw active: true.
 export const featuredContest: FeaturedContest = {
-  title: 'Paracord Knife | Crimson Web',
-  value: 'WARTOŚĆ: ~500 ZŁ',
-  endsAt: '2026-09-23T20:00:00+02:00',
-  href: 'https://www.youtube.com/watch?v=DrONV4agGAg',
-  image: 'https://steamcommunity-a.akamaihd.net/economy/image/i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL6kJ_m-B1Y4OCqV6x0H-eWDHSvzOtyufRkAX_klkQm5WTTztisdCmWOg8lX8NzTeBc4BC-lIHkMe624FeKjo9Ey3jgznQesZVzO3U',
+  title: 'Survival Knife | Slaughter',
+  value: 'WARTOŚĆ: ~600 ZŁ',
+  endsAt: '2026-11-08T18:00:00+01:00',
+  href: 'https://youtu.be/HmnGOCqIaX8',
+  image: '/skins/survival-knife-slaughter.png',
   active: true,
 };
 
